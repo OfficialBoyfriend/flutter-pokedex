@@ -1,0 +1,10 @@
+# melos_managed_dependency_overrides: atom,markdown_widget,self_utils,window_manager_service
+dependency_overrides:
+  atom:
+    path: ../../packages/atom
+  markdown_widget:
+    path: ../../packages/markdown_widget
+  self_utils:
+    path: ../../packages/self_utils
+  window_manager_service:
+    path: ../../services/window_manager

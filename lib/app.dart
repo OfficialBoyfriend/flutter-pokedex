@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:window_manager_service/widgets/window_app.dart';
+
 import 'package:pokedex/presentation/routers.dart';
 import 'package:pokedex/presentation/theme/text_theme.dart';
 
@@ -13,9 +15,12 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ProviderScope(
-      child: MaterialApp.router(
+      child: WindowApp.router(
         routerConfig: appRouter.config(),
-        theme: ThemeData(textTheme: const CustomTextTheme()),
+        builder: (context, child) => Theme(
+          data: ThemeData(textTheme: const CustomTextTheme()),
+          child: child ?? const FlutterLogo(),
+        ),
       ),
     );
   }

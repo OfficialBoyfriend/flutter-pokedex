@@ -27,6 +27,9 @@ dependencies:
   flutter_slidable: 3.1.1
   flutter_riverpod: ^2.5.1
 
+  window_manager_service:
+    path: ../../services/window_manager
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
