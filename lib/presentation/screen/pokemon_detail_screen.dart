@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'dart:async';
 import 'dart:math';
 
@@ -32,8 +30,8 @@ class PokemonDetailScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final info = ref.watch(pokemonDetailScreenViewModelProvider(pokdexId)
-        .select((value) => value.pokemonDetailInfo));
+    final info = ref.watch(
+        pokemonDetailScreenViewModelProvider(pokdexId).select((value) => value.pokemonDetailInfo));
 
     return Scaffold(
       body: AnimatedCrossFade(
@@ -42,13 +40,8 @@ class PokemonDetailScreen extends HookConsumerWidget {
         alignment: Alignment.topCenter,
         duration: const Duration(milliseconds: 300),
         firstChild: _Placeholder(),
-        secondChild: info != null
-            ? _Content(
-                info: info,
-              )
-            : const SizedBox(),
-        crossFadeState:
-            info == null ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+        secondChild: info != null ? _Content(info: info) : const SizedBox(),
+        crossFadeState: info == null ? CrossFadeState.showFirst : CrossFadeState.showSecond,
       ),
     );
   }
@@ -62,24 +55,18 @@ class _Placeholder extends StatelessWidget {
       children: [
         Stack(
           children: [
-            _DefaultShimmer(
-              child: PokemonTypeBackground(
-                color: Colors.grey,
-              ),
+            const _DefaultShimmer(
+              child: PokemonTypeBackground(color: Colors.grey),
             ),
             Positioned(
               left: 16,
               top: 16 + MediaQuery.of(context).padding.top,
-              child: _BackButton(),
+              child: const _BackButton(),
             ),
           ],
         ),
         Padding(
-          padding: const EdgeInsets.only(
-            left: 16,
-            right: 16,
-            top: 18,
-          ),
+          padding: const EdgeInsets.only(left: 16, right: 16, top: 18),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -93,7 +80,7 @@ class _Placeholder extends StatelessWidget {
                   ),
                 ),
               ),
-              Gap(8),
+              const Gap(8),
               _DefaultShimmer(
                 child: Container(
                   height: 22,
@@ -104,7 +91,7 @@ class _Placeholder extends StatelessWidget {
                   ),
                 ),
               ),
-              Gap(24),
+              const Gap(24),
               _DefaultShimmer(
                 child: Container(
                   height: 36,
@@ -115,7 +102,7 @@ class _Placeholder extends StatelessWidget {
                   ),
                 ),
               ),
-              Gap(24),
+              const Gap(24),
               _DefaultShimmer(
                 child: Container(
                   height: 100,
@@ -145,10 +132,7 @@ class PokemonTypeBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      size: Size(
-        MediaQuery.of(context).size.width,
-        330,
-      ),
+      size: Size(MediaQuery.of(context).size.width, 330),
       painter: _PokemonTypeBackgroundPainter(color),
     );
   }
@@ -193,7 +177,7 @@ class _Content extends StatelessWidget {
     final name = info.name.replaceAll('-', " ").capitalizeFirst();
 
     return SingleChildScrollView(
-      physics: ClampingScrollPhysics(),
+      physics: const ClampingScrollPhysics(),
       child: Container(
         color: Colors.white,
         child: Column(
@@ -212,15 +196,11 @@ class _Content extends StatelessWidget {
                     height: 204,
                   ),
                 ),
-                Positioned(
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    child: _PokemonImage(info: info)),
+                Positioned(left: 0, right: 0, bottom: 0, child: _PokemonImage(info: info)),
                 Positioned(
                   left: 16,
                   top: 16 + MediaQuery.of(context).padding.top,
-                  child: _BackButton(),
+                  child: const _BackButton(),
                 ),
                 _FavButton(
                   pokdexId: info.pokedexId,
@@ -229,10 +209,11 @@ class _Content extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                  left: 16,
-                  right: 16,
-                  top: 18,
-                  bottom: 26 + MediaQuery.of(context).padding.bottom),
+                left: 16,
+                right: 16,
+                top: 18,
+                bottom: 26 + MediaQuery.of(context).padding.bottom,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -282,15 +263,14 @@ class _Content extends StatelessWidget {
                   const Gap(12),
                   GridView.count(
                       padding: EdgeInsets.zero,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       crossAxisCount: 2,
                       childAspectRatio: 156.0 / 36.0,
                       crossAxisSpacing: 16,
                       mainAxisSpacing: 12,
-                      children: info.weaknesses
-                          .map((type) => PokemonTypeChip.large(type))
-                          .toList()),
+                      children:
+                          info.weaknesses.map((type) => PokemonTypeChip.large(type)).toList()),
                   const Gap(40),
                   Text(
                     "Evolutions",
@@ -328,9 +308,7 @@ class _FavButton extends ConsumerWidget {
       top: 16 + MediaQuery.of(context).padding.top,
       child: GestureDetector(
         onTap: () {
-          ref
-              .read(favoriteButtonViewModelProvider(pokdexId).notifier)
-              .toggleFavorite();
+          ref.read(favoriteButtonViewModelProvider(pokdexId).notifier).toggleFavorite();
         },
         child: AnimatedCrossFade(
           firstChild: SvgPicture.asset(
@@ -344,8 +322,7 @@ class _FavButton extends ConsumerWidget {
             height: 28,
           ),
           duration: const Duration(milliseconds: 300),
-          crossFadeState:
-              isFav ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+          crossFadeState: isFav ? CrossFadeState.showSecond : CrossFadeState.showFirst,
         ),
       ),
     );

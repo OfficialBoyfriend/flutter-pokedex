@@ -299,7 +299,7 @@ packages:
     source: hosted
     version: "4.0.0"
   flutter_localizations:
-    dependency: transitive
+    dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
@@ -721,7 +721,7 @@ packages:
     source: hosted
     version: "2.5.1"
   self_utils:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
       path: "../../packages/self_utils"
       relative: true

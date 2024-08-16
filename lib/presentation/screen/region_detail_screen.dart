@@ -21,14 +21,13 @@ class RegionDetailScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pokedexIdRange = PokedexIdRange(
-        start: regionType.startPokedexId, end: regionType.endPokedexId);
+    final pokedexIdRange =
+        PokedexIdRange(start: regionType.startPokedexId, end: regionType.endPokedexId);
 
-    final list = ref.watch(pokemonListViewModelProvider(pokedexIdRange)
-        .select((state) => state.list));
+    final list =
+        ref.watch(pokemonListViewModelProvider(pokedexIdRange).select((state) => state.list));
 
-    final needLoadMore =
-        ref.watch(pokemonListViewModelProvider(pokedexIdRange).select((state) {
+    final needLoadMore = ref.watch(pokemonListViewModelProvider(pokedexIdRange).select((state) {
       return state.isEndOfList == false && state.list.isNotEmpty;
     }));
 
@@ -36,11 +35,8 @@ class RegionDetailScreen extends HookConsumerWidget {
 
     useEffect(() {
       controller.addListener(() {
-        if (controller.position.pixels >=
-            controller.position.maxScrollExtent - 100) {
-          ref
-              .read(pokemonListViewModelProvider(pokedexIdRange).notifier)
-              .loadMore();
+        if (controller.position.pixels >= controller.position.maxScrollExtent - 100) {
+          ref.read(pokemonListViewModelProvider(pokedexIdRange).notifier).loadMore();
         }
       });
       return null;
@@ -80,9 +76,7 @@ class RegionDetailScreen extends HookConsumerWidget {
             child: AnimatedSwitcher(
               duration: const Duration(milliseconds: 500),
               child: list.isEmpty
-                  ? const Center(
-                      key: ValueKey("loading"),
-                      child: CircularProgressIndicator())
+                  ? const Center(key: ValueKey("loading"), child: CircularProgressIndicator())
                   : ListView.builder(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       key: const ValueKey("loaded"),
@@ -94,9 +88,7 @@ class RegionDetailScreen extends HookConsumerWidget {
                             height: 90,
                             child: Center(
                               child: SizedBox(
-                                  width: 30,
-                                  height: 30,
-                                  child: CircularProgressIndicator()),
+                                  width: 30, height: 30, child: CircularProgressIndicator()),
                             ),
                           );
                         } else {
