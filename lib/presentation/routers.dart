@@ -8,7 +8,7 @@ import 'package:pokedex/presentation/screen/region_detail_screen.dart';
 part 'routers.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen,Route')
-class AppRouter extends _$AppRouter {
+class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(page: HomeRoute.page, initial: true),
@@ -20,5 +20,4 @@ class AppRouter extends _$AppRouter {
         ),
         AutoRoute(page: RegionDetailRoute.page),
       ];
-      
 }

@@ -21,20 +21,20 @@ This Pokedex app was built using Flutter, allowing users to explore and search f
 ## Screenshots
 
 <div align="center">
-    <img src="./readme_assets/home.webp" width="25%">
-    <img src="./readme_assets/infinite_scroll.webp" width="25%">
-    <img src="./readme_assets/region.webp" width="25%">
+    <img src="./docs/home.webp" width="25%">
+    <img src="./docs/infinite_scroll.webp" width="25%">
+    <img src="./docs/region.webp" width="25%">
 
 </div>
 <div align="center">
-    <img src="./readme_assets/detail.webp" width="25%">
-    <img src="./readme_assets/favorite.webp" width="25%">
-    <img src="./readme_assets/pikachu.webp" width="25%">
+    <img src="./docs/detail.webp" width="25%">
+    <img src="./docs/favorite.webp" width="25%">
+    <img src="./docs/pikachu.webp" width="25%">
 </div>
 <div align="center">
-    <img src="./readme_assets/venusaur.webp" width="25%">
-    <img src="./readme_assets/charizard.webp" width="25%">
-    <img src="./readme_assets/blastoise.webp" width="25%">
+    <img src="./docs/venusaur.webp" width="25%">
+    <img src="./docs/charizard.webp" width="25%">
+    <img src="./docs/blastoise.webp" width="25%">
 </div>
 
 ## API
@@ -46,7 +46,7 @@ This Pokedex app was built using Flutter, allowing users to explore and search f
 ## State Management Library
 
 <div align="center">
-    <img src="./readme_assets/riverpod.png" width="100%">
+    <img src="./docs/riverpod.png" width="100%">
 </div>
 
 - Riverpod is a powerful and flexible library for state management and hooks.

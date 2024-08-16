@@ -9,41 +9,6 @@
 
 part of 'routers.dart';
 
-abstract class _$AppRouter extends RootStackRouter {
-  // ignore: unused_element
-  _$AppRouter({super.navigatorKey});
-
-  @override
-  final Map<String, PageFactory> pagesMap = {
-    HomeRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const HomeScreen(),
-      );
-    },
-    PokemonDetailRoute.name: (routeData) {
-      final args = routeData.argsAs<PokemonDetailRouteArgs>();
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: PokemonDetailScreen(
-          key: args.key,
-          pokdexId: args.pokdexId,
-        ),
-      );
-    },
-    RegionDetailRoute.name: (routeData) {
-      final args = routeData.argsAs<RegionDetailRouteArgs>();
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: RegionDetailScreen(
-          key: args.key,
-          regionType: args.regionType,
-        ),
-      );
-    },
-  };
-}
-
 /// generated route for
 /// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
@@ -55,7 +20,12 @@ class HomeRoute extends PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const HomeScreen();
+    },
+  );
 }
 
 /// generated route for
@@ -76,8 +46,16 @@ class PokemonDetailRoute extends PageRouteInfo<PokemonDetailRouteArgs> {
 
   static const String name = 'PokemonDetailRoute';
 
-  static const PageInfo<PokemonDetailRouteArgs> page =
-      PageInfo<PokemonDetailRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<PokemonDetailRouteArgs>();
+      return PokemonDetailScreen(
+        key: args.key,
+        pokdexId: args.pokdexId,
+      );
+    },
+  );
 }
 
 class PokemonDetailRouteArgs {
@@ -114,8 +92,16 @@ class RegionDetailRoute extends PageRouteInfo<RegionDetailRouteArgs> {
 
   static const String name = 'RegionDetailRoute';
 
-  static const PageInfo<RegionDetailRouteArgs> page =
-      PageInfo<RegionDetailRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<RegionDetailRouteArgs>();
+      return RegionDetailScreen(
+        key: args.key,
+        regionType: args.regionType,
+      );
+    },
+  );
 }
 
 class RegionDetailRouteArgs {

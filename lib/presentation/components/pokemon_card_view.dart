@@ -69,14 +69,12 @@ class _FavButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isFav = ref.watch(favoriteButtonViewModelProvider(pokdexId)
-        .select((state) => state.isFavorite));
+    final isFav =
+        ref.watch(favoriteButtonViewModelProvider(pokdexId).select((state) => state.isFavorite));
 
     return GestureDetector(
       onTap: () {
-        ref
-            .read(favoriteButtonViewModelProvider(pokdexId).notifier)
-            .toggleFavorite();
+        ref.read(favoriteButtonViewModelProvider(pokdexId).notifier).toggleFavorite();
       },
       child: AnimatedCrossFade(
         duration: const Duration(milliseconds: 300),
@@ -90,8 +88,7 @@ class _FavButton extends ConsumerWidget {
           width: 32,
           height: 32,
         ),
-        crossFadeState:
-            isFav ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+        crossFadeState: isFav ? CrossFadeState.showSecond : CrossFadeState.showFirst,
       ),
     );
   }
@@ -144,12 +141,15 @@ class _MediumWidget extends StatelessWidget {
                       ),
                       const Gap(4),
                       Row(
-                          children: info.types
-                              .mapIndexed((i, type) => Padding(
-                                  padding:
-                                      EdgeInsets.only(left: i == 0 ? 0 : 4),
-                                  child: PokemonTypeChip.medium(type)))
-                              .toList()),
+                        children: info.types
+                            .mapIndexed(
+                              (i, type) => Padding(
+                                padding: EdgeInsets.only(left: i == 0 ? 0 : 4),
+                                child: PokemonTypeChip.medium(type),
+                              ),
+                            )
+                            .toList(),
+                      ),
                     ],
                   ),
                   Stack(
@@ -171,7 +171,12 @@ class _MediumWidget extends StatelessWidget {
                           height: 126,
                         ),
                       ),
-                      Image.network(info.imageUrl),
+                      Image.network(
+                        info.imageUrl,
+                        errorBuilder: (context, error, stackTrace) {
+                          return const SizedBox.shrink();
+                        },
+                      ),
                       Positioned(
                         top: 6,
                         right: 12,
@@ -266,8 +271,7 @@ class _SmallWidget extends StatelessWidget {
                     children: info.types
                         .mapIndexed((i, type) => Expanded(
                               child: Padding(
-                                  padding:
-                                      EdgeInsets.only(left: i == 0 ? 0 : 4),
+                                  padding: EdgeInsets.only(left: i == 0 ? 0 : 4),
                                   child: PokemonTypeChip.small(type)),
                             ))
                         .toList()),
