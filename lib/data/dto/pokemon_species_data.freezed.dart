@@ -29,8 +29,12 @@ mixin _$PokemonSpeciesData {
   @JsonKey(name: 'evolution_chain')
   UrlData get evolutionChain => throw _privateConstructorUsedError;
 
+  /// Serializes this PokemonSpeciesData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PokemonSpeciesData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokemonSpeciesDataCopyWith<PokemonSpeciesData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -61,6 +65,8 @@ class _$PokemonSpeciesDataCopyWithImpl<$Res, $Val extends PokemonSpeciesData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokemonSpeciesData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -89,6 +95,8 @@ class _$PokemonSpeciesDataCopyWithImpl<$Res, $Val extends PokemonSpeciesData>
     ) as $Val);
   }
 
+  /// Create a copy of PokemonSpeciesData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UrlDataCopyWith<$Res> get evolutionChain {
@@ -125,6 +133,8 @@ class __$$PokemonSpeciesDataImplCopyWithImpl<$Res>
       $Res Function(_$PokemonSpeciesDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokemonSpeciesData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -213,7 +223,7 @@ class _$PokemonSpeciesDataImpl implements _PokemonSpeciesData {
                 other.evolutionChain == evolutionChain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -222,7 +232,9 @@ class _$PokemonSpeciesDataImpl implements _PokemonSpeciesData {
       const DeepCollectionEquality().hash(_genera),
       evolutionChain);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonSpeciesData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonSpeciesDataImplCopyWith<_$PokemonSpeciesDataImpl> get copyWith =>
@@ -260,8 +272,11 @@ abstract class _PokemonSpeciesData implements PokemonSpeciesData {
   @override
   @JsonKey(name: 'evolution_chain')
   UrlData get evolutionChain;
+
+  /// Create a copy of PokemonSpeciesData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokemonSpeciesDataImplCopyWith<_$PokemonSpeciesDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -276,8 +291,12 @@ mixin _$FlavorTextEntry {
   String get flavorText => throw _privateConstructorUsedError;
   NameUrlData get language => throw _privateConstructorUsedError;
 
+  /// Serializes this FlavorTextEntry to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FlavorTextEntry
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FlavorTextEntryCopyWith<FlavorTextEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -304,6 +323,8 @@ class _$FlavorTextEntryCopyWithImpl<$Res, $Val extends FlavorTextEntry>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FlavorTextEntry
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -322,6 +343,8 @@ class _$FlavorTextEntryCopyWithImpl<$Res, $Val extends FlavorTextEntry>
     ) as $Val);
   }
 
+  /// Create a copy of FlavorTextEntry
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NameUrlDataCopyWith<$Res> get language {
@@ -354,6 +377,8 @@ class __$$FlavorTextEntryImplCopyWithImpl<$Res>
       _$FlavorTextEntryImpl _value, $Res Function(_$FlavorTextEntryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FlavorTextEntry
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -405,11 +430,13 @@ class _$FlavorTextEntryImpl implements _FlavorTextEntry {
                 other.language == language));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, flavorText, language);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FlavorTextEntry
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FlavorTextEntryImplCopyWith<_$FlavorTextEntryImpl> get copyWith =>
@@ -437,8 +464,11 @@ abstract class _FlavorTextEntry implements FlavorTextEntry {
   String get flavorText;
   @override
   NameUrlData get language;
+
+  /// Create a copy of FlavorTextEntry
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FlavorTextEntryImplCopyWith<_$FlavorTextEntryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -452,8 +482,12 @@ mixin _$GeneraData {
   String get genus => throw _privateConstructorUsedError;
   NameUrlData get language => throw _privateConstructorUsedError;
 
+  /// Serializes this GeneraData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GeneraData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GeneraDataCopyWith<GeneraData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -479,6 +513,8 @@ class _$GeneraDataCopyWithImpl<$Res, $Val extends GeneraData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GeneraData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -497,6 +533,8 @@ class _$GeneraDataCopyWithImpl<$Res, $Val extends GeneraData>
     ) as $Val);
   }
 
+  /// Create a copy of GeneraData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NameUrlDataCopyWith<$Res> get language {
@@ -528,6 +566,8 @@ class __$$GeneraDataImplCopyWithImpl<$Res>
       _$GeneraDataImpl _value, $Res Function(_$GeneraDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GeneraData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -575,11 +615,13 @@ class _$GeneraDataImpl implements _GeneraData {
                 other.language == language));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, genus, language);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GeneraData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GeneraDataImplCopyWith<_$GeneraDataImpl> get copyWith =>
@@ -605,8 +647,11 @@ abstract class _GeneraData implements GeneraData {
   String get genus;
   @override
   NameUrlData get language;
+
+  /// Create a copy of GeneraData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GeneraDataImplCopyWith<_$GeneraDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

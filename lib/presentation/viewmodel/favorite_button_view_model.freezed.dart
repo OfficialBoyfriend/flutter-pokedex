@@ -18,7 +18,9 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$FavoriteButtonState {
   bool get isFavorite => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FavoriteButtonState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FavoriteButtonStateCopyWith<FavoriteButtonState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -42,6 +44,8 @@ class _$FavoriteButtonStateCopyWithImpl<$Res, $Val extends FavoriteButtonState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FavoriteButtonState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,6 +79,8 @@ class __$$FavoriteButtonStateImplCopyWithImpl<$Res>
       $Res Function(_$FavoriteButtonStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FavoriteButtonState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,7 +120,9 @@ class _$FavoriteButtonStateImpl implements _FavoriteButtonState {
   @override
   int get hashCode => Object.hash(runtimeType, isFavorite);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FavoriteButtonState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FavoriteButtonStateImplCopyWith<_$FavoriteButtonStateImpl> get copyWith =>
@@ -128,8 +136,11 @@ abstract class _FavoriteButtonState implements FavoriteButtonState {
 
   @override
   bool get isFavorite;
+
+  /// Create a copy of FavoriteButtonState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FavoriteButtonStateImplCopyWith<_$FavoriteButtonStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

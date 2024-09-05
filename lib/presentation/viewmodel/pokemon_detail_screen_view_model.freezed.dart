@@ -19,7 +19,9 @@ mixin _$PokemonDetailScreenViewModelState {
   PokemonDetailInfo? get pokemonDetailInfo =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonDetailScreenViewModelState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokemonDetailScreenViewModelStateCopyWith<PokemonDetailScreenViewModelState>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -48,6 +50,8 @@ class _$PokemonDetailScreenViewModelStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokemonDetailScreenViewModelState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -61,6 +65,8 @@ class _$PokemonDetailScreenViewModelStateCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PokemonDetailScreenViewModelState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PokemonDetailInfoCopyWith<$Res>? get pokemonDetailInfo {
@@ -99,6 +105,8 @@ class __$$PokemonDetailScreenViewModelStateImplCopyWithImpl<$Res>
       $Res Function(_$PokemonDetailScreenViewModelStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokemonDetailScreenViewModelState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,7 +147,9 @@ class _$PokemonDetailScreenViewModelStateImpl
   @override
   int get hashCode => Object.hash(runtimeType, pokemonDetailInfo);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonDetailScreenViewModelState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonDetailScreenViewModelStateImplCopyWith<
@@ -156,8 +166,11 @@ abstract class _PokemonDetailScreenViewModelState
 
   @override
   PokemonDetailInfo? get pokemonDetailInfo;
+
+  /// Create a copy of PokemonDetailScreenViewModelState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokemonDetailScreenViewModelStateImplCopyWith<
           _$PokemonDetailScreenViewModelStateImpl>
       get copyWith => throw _privateConstructorUsedError;

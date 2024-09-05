@@ -30,7 +30,9 @@ mixin _$PokemonDetailInfo {
       throw _privateConstructorUsedError;
   double? get genderRate => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokemonDetailInfoCopyWith<PokemonDetailInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +70,8 @@ class _$PokemonDetailInfoCopyWithImpl<$Res, $Val extends PokemonDetailInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokemonDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -136,6 +140,8 @@ class _$PokemonDetailInfoCopyWithImpl<$Res, $Val extends PokemonDetailInfo>
     ) as $Val);
   }
 
+  /// Create a copy of PokemonDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PokemonEvolutionChainInfoCopyWith<$Res>? get evolutionChainInfo {
@@ -184,6 +190,8 @@ class __$$PokemonDetailInfoImplCopyWithImpl<$Res>
       $Res Function(_$PokemonDetailInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokemonDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -363,7 +371,9 @@ class _$PokemonDetailInfoImpl implements _PokemonDetailInfo {
       evolutionChainInfo,
       genderRate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonDetailInfoImplCopyWith<_$PokemonDetailInfoImpl> get copyWith =>
@@ -410,8 +420,11 @@ abstract class _PokemonDetailInfo implements PokemonDetailInfo {
   PokemonEvolutionChainInfo? get evolutionChainInfo;
   @override
   double? get genderRate;
+
+  /// Create a copy of PokemonDetailInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokemonDetailInfoImplCopyWith<_$PokemonDetailInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

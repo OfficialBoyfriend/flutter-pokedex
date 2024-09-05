@@ -25,7 +25,9 @@ mixin _$PokemonInfo {
   double get weight => throw _privateConstructorUsedError;
   List<String> get abilities => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokemonInfoCopyWith<PokemonInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,6 +59,8 @@ class _$PokemonInfoCopyWithImpl<$Res, $Val extends PokemonInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokemonInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -133,6 +137,8 @@ class __$$PokemonInfoImplCopyWithImpl<$Res>
       _$PokemonInfoImpl _value, $Res Function(_$PokemonInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokemonInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -261,7 +267,9 @@ class _$PokemonInfoImpl implements _PokemonInfo {
       weight,
       const DeepCollectionEquality().hash(_abilities));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonInfoImplCopyWith<_$PokemonInfoImpl> get copyWith =>
@@ -295,8 +303,11 @@ abstract class _PokemonInfo implements PokemonInfo {
   double get weight;
   @override
   List<String> get abilities;
+
+  /// Create a copy of PokemonInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokemonInfoImplCopyWith<_$PokemonInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

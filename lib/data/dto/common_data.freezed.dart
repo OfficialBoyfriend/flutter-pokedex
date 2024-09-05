@@ -23,8 +23,12 @@ mixin _$NameUrlData {
   String get name => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
 
+  /// Serializes this NameUrlData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of NameUrlData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NameUrlDataCopyWith<NameUrlData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$NameUrlDataCopyWithImpl<$Res, $Val extends NameUrlData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NameUrlData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$NameUrlDataImplCopyWithImpl<$Res>
       _$NameUrlDataImpl _value, $Res Function(_$NameUrlDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NameUrlData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,11 +140,13 @@ class _$NameUrlDataImpl implements _NameUrlData {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NameUrlData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NameUrlDataImplCopyWith<_$NameUrlDataImpl> get copyWith =>
@@ -162,8 +172,11 @@ abstract class _NameUrlData implements NameUrlData {
   String get name;
   @override
   String get url;
+
+  /// Create a copy of NameUrlData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NameUrlDataImplCopyWith<_$NameUrlDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -176,8 +189,12 @@ UrlData _$UrlDataFromJson(Map<String, dynamic> json) {
 mixin _$UrlData {
   String get url => throw _privateConstructorUsedError;
 
+  /// Serializes this UrlData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UrlData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UrlDataCopyWith<UrlData> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -199,6 +216,8 @@ class _$UrlDataCopyWithImpl<$Res, $Val extends UrlData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UrlData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -231,6 +250,8 @@ class __$$UrlDataImplCopyWithImpl<$Res>
       _$UrlDataImpl _value, $Res Function(_$UrlDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UrlData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -269,11 +290,13 @@ class _$UrlDataImpl implements _UrlData {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UrlData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UrlDataImplCopyWith<_$UrlDataImpl> get copyWith =>
@@ -294,8 +317,11 @@ abstract class _UrlData implements UrlData {
 
   @override
   String get url;
+
+  /// Create a copy of UrlData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UrlDataImplCopyWith<_$UrlDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -309,8 +335,12 @@ mixin _$ImageUrlSetData {
   @JsonKey(name: 'front_default')
   String get frontDefault => throw _privateConstructorUsedError;
 
+  /// Serializes this ImageUrlSetData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ImageUrlSetData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ImageUrlSetDataCopyWith<ImageUrlSetData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -334,6 +364,8 @@ class _$ImageUrlSetDataCopyWithImpl<$Res, $Val extends ImageUrlSetData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ImageUrlSetData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -367,6 +399,8 @@ class __$$ImageUrlSetDataImplCopyWithImpl<$Res>
       _$ImageUrlSetDataImpl _value, $Res Function(_$ImageUrlSetDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ImageUrlSetData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -408,11 +442,13 @@ class _$ImageUrlSetDataImpl implements _ImageUrlSetData {
                 other.frontDefault == frontDefault));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, frontDefault);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ImageUrlSetData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ImageUrlSetDataImplCopyWith<_$ImageUrlSetDataImpl> get copyWith =>
@@ -438,8 +474,11 @@ abstract class _ImageUrlSetData implements ImageUrlSetData {
   @override
   @JsonKey(name: 'front_default')
   String get frontDefault;
+
+  /// Create a copy of ImageUrlSetData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ImageUrlSetDataImplCopyWith<_$ImageUrlSetDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

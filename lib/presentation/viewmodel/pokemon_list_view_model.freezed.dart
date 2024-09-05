@@ -20,7 +20,9 @@ mixin _$PokemonListViewModelState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isEndOfList => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonListViewModelState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokemonListViewModelStateCopyWith<PokemonListViewModelState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -45,6 +47,8 @@ class _$PokemonListViewModelStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokemonListViewModelState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +95,8 @@ class __$$PokemonListViewModelStateImplCopyWithImpl<$Res>
       $Res Function(_$PokemonListViewModelStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokemonListViewModelState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -158,7 +164,9 @@ class _$PokemonListViewModelStateImpl implements _PokemonListViewModelState {
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(_list), isLoading, isEndOfList);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonListViewModelState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonListViewModelStateImplCopyWith<_$PokemonListViewModelStateImpl>
@@ -178,8 +186,11 @@ abstract class _PokemonListViewModelState implements PokemonListViewModelState {
   bool get isLoading;
   @override
   bool get isEndOfList;
+
+  /// Create a copy of PokemonListViewModelState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokemonListViewModelStateImplCopyWith<_$PokemonListViewModelStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

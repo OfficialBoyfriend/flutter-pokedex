@@ -24,8 +24,12 @@ mixin _$PokemonTypeDetailData {
   @JsonKey(name: 'damage_relations')
   DamageRelationsData get demageRelations => throw _privateConstructorUsedError;
 
+  /// Serializes this PokemonTypeDetailData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PokemonTypeDetailData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokemonTypeDetailDataCopyWith<PokemonTypeDetailData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$PokemonTypeDetailDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokemonTypeDetailData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -66,6 +72,8 @@ class _$PokemonTypeDetailDataCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PokemonTypeDetailData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DamageRelationsDataCopyWith<$Res> get demageRelations {
@@ -100,6 +108,8 @@ class __$$PokemonTypeDetailDataImplCopyWithImpl<$Res>
       $Res Function(_$PokemonTypeDetailDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokemonTypeDetailData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -141,11 +151,13 @@ class _$PokemonTypeDetailDataImpl implements _PokemonTypeDetailData {
                 other.demageRelations == demageRelations));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, demageRelations);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonTypeDetailData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonTypeDetailDataImplCopyWith<_$PokemonTypeDetailDataImpl>
@@ -172,8 +184,11 @@ abstract class _PokemonTypeDetailData implements PokemonTypeDetailData {
   @override
   @JsonKey(name: 'damage_relations')
   DamageRelationsData get demageRelations;
+
+  /// Create a copy of PokemonTypeDetailData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokemonTypeDetailDataImplCopyWith<_$PokemonTypeDetailDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -187,8 +202,12 @@ mixin _$DamageRelationsData {
   @JsonKey(name: 'double_damage_from')
   List<NameUrlData> get doubleDamageFrom => throw _privateConstructorUsedError;
 
+  /// Serializes this DamageRelationsData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DamageRelationsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DamageRelationsDataCopyWith<DamageRelationsData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -214,6 +233,8 @@ class _$DamageRelationsDataCopyWithImpl<$Res, $Val extends DamageRelationsData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DamageRelationsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -249,6 +270,8 @@ class __$$DamageRelationsDataImplCopyWithImpl<$Res>
       $Res Function(_$DamageRelationsDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DamageRelationsData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -298,12 +321,14 @@ class _$DamageRelationsDataImpl implements _DamageRelationsData {
                 .equals(other._doubleDamageFrom, _doubleDamageFrom));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_doubleDamageFrom));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DamageRelationsData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DamageRelationsDataImplCopyWith<_$DamageRelationsDataImpl> get copyWith =>
@@ -330,8 +355,11 @@ abstract class _DamageRelationsData implements DamageRelationsData {
   @override
   @JsonKey(name: 'double_damage_from')
   List<NameUrlData> get doubleDamageFrom;
+
+  /// Create a copy of DamageRelationsData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DamageRelationsDataImplCopyWith<_$DamageRelationsDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -21,7 +21,9 @@ mixin _$PokemonSpeciesInfo {
   String get category => throw _privateConstructorUsedError;
   int get evolutionChainId => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonSpeciesInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokemonSpeciesInfoCopyWith<PokemonSpeciesInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -46,6 +48,8 @@ class _$PokemonSpeciesInfoCopyWithImpl<$Res, $Val extends PokemonSpeciesInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokemonSpeciesInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +99,8 @@ class __$$PokemonSpeciesInfoImplCopyWithImpl<$Res>
       $Res Function(_$PokemonSpeciesInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokemonSpeciesInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -165,7 +171,9 @@ class _$PokemonSpeciesInfoImpl implements _PokemonSpeciesInfo {
   int get hashCode =>
       Object.hash(runtimeType, genderRate, desc, category, evolutionChainId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonSpeciesInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonSpeciesInfoImplCopyWith<_$PokemonSpeciesInfoImpl> get copyWith =>
@@ -188,8 +196,11 @@ abstract class _PokemonSpeciesInfo implements PokemonSpeciesInfo {
   String get category;
   @override
   int get evolutionChainId;
+
+  /// Create a copy of PokemonSpeciesInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokemonSpeciesInfoImplCopyWith<_$PokemonSpeciesInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

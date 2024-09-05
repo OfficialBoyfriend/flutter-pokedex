@@ -22,10 +22,10 @@ class PokemonCardView extends StatelessWidget {
   final PokemonCardViewSize size;
 
   const PokemonCardView._({
-    Key? key,
+    super.key,
     required this.info,
     required this.size,
-  }) : super(key: key);
+  });
 
   factory PokemonCardView.medium({
     Key? key,

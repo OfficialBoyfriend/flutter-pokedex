@@ -23,8 +23,12 @@ PokemonEvolutionChainData _$PokemonEvolutionChainDataFromJson(
 mixin _$PokemonEvolutionChainData {
   ChainData get chain => throw _privateConstructorUsedError;
 
+  /// Serializes this PokemonEvolutionChainData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PokemonEvolutionChainData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokemonEvolutionChainDataCopyWith<PokemonEvolutionChainData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$PokemonEvolutionChainDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokemonEvolutionChainData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -64,6 +70,8 @@ class _$PokemonEvolutionChainDataCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PokemonEvolutionChainData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ChainDataCopyWith<$Res> get chain {
@@ -98,6 +106,8 @@ class __$$PokemonEvolutionChainDataImplCopyWithImpl<$Res>
       $Res Function(_$PokemonEvolutionChainDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokemonEvolutionChainData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -136,11 +146,13 @@ class _$PokemonEvolutionChainDataImpl implements _PokemonEvolutionChainData {
             (identical(other.chain, chain) || other.chain == chain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, chain);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonEvolutionChainData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonEvolutionChainDataImplCopyWith<_$PokemonEvolutionChainDataImpl>
@@ -164,8 +176,11 @@ abstract class _PokemonEvolutionChainData implements PokemonEvolutionChainData {
 
   @override
   ChainData get chain;
+
+  /// Create a copy of PokemonEvolutionChainData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokemonEvolutionChainDataImplCopyWith<_$PokemonEvolutionChainDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -180,8 +195,12 @@ mixin _$ChainData {
   List<ChainData> get evolvesTo => throw _privateConstructorUsedError;
   NameUrlData get species => throw _privateConstructorUsedError;
 
+  /// Serializes this ChainData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChainData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChainDataCopyWith<ChainData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -208,6 +227,8 @@ class _$ChainDataCopyWithImpl<$Res, $Val extends ChainData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChainData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -226,6 +247,8 @@ class _$ChainDataCopyWithImpl<$Res, $Val extends ChainData>
     ) as $Val);
   }
 
+  /// Create a copy of ChainData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NameUrlDataCopyWith<$Res> get species {
@@ -259,6 +282,8 @@ class __$$ChainDataImplCopyWithImpl<$Res>
       _$ChainDataImpl _value, $Res Function(_$ChainDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChainData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -316,12 +341,14 @@ class _$ChainDataImpl implements _ChainData {
             (identical(other.species, species) || other.species == species));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_evolvesTo), species);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChainData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChainDataImplCopyWith<_$ChainDataImpl> get copyWith =>
@@ -348,8 +375,11 @@ abstract class _ChainData implements ChainData {
   List<ChainData> get evolvesTo;
   @override
   NameUrlData get species;
+
+  /// Create a copy of ChainData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChainDataImplCopyWith<_$ChainDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

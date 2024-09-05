@@ -18,7 +18,9 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$PokemonWeaknessTypesInfo {
   List<PokemonType> get weaknesses => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonWeaknessTypesInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokemonWeaknessTypesInfoCopyWith<PokemonWeaknessTypesInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43,6 +45,8 @@ class _$PokemonWeaknessTypesInfoCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokemonWeaknessTypesInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +83,8 @@ class __$$PokemonWeaknessTypesInfoImplCopyWithImpl<$Res>
       $Res Function(_$PokemonWeaknessTypesInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokemonWeaknessTypesInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -126,7 +132,9 @@ class _$PokemonWeaknessTypesInfoImpl implements _PokemonWeaknessTypesInfo {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_weaknesses));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonWeaknessTypesInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonWeaknessTypesInfoImplCopyWith<_$PokemonWeaknessTypesInfoImpl>
@@ -141,8 +149,11 @@ abstract class _PokemonWeaknessTypesInfo implements PokemonWeaknessTypesInfo {
 
   @override
   List<PokemonType> get weaknesses;
+
+  /// Create a copy of PokemonWeaknessTypesInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokemonWeaknessTypesInfoImplCopyWith<_$PokemonWeaknessTypesInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

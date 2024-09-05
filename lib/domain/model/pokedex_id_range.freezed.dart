@@ -19,7 +19,9 @@ mixin _$PokedexIdRange {
   int get start => throw _privateConstructorUsedError;
   int get end => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokedexIdRange
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokedexIdRangeCopyWith<PokedexIdRange> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43,6 +45,8 @@ class _$PokedexIdRangeCopyWithImpl<$Res, $Val extends PokedexIdRange>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokedexIdRange
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +85,8 @@ class __$$PokedexIdRangeImplCopyWithImpl<$Res>
       _$PokedexIdRangeImpl _value, $Res Function(_$PokedexIdRangeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokedexIdRange
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,7 +133,9 @@ class _$PokedexIdRangeImpl implements _PokedexIdRange {
   @override
   int get hashCode => Object.hash(runtimeType, start, end);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokedexIdRange
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokedexIdRangeImplCopyWith<_$PokedexIdRangeImpl> get copyWith =>
@@ -144,8 +152,11 @@ abstract class _PokedexIdRange implements PokedexIdRange {
   int get start;
   @override
   int get end;
+
+  /// Create a copy of PokedexIdRange
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokedexIdRangeImplCopyWith<_$PokedexIdRangeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

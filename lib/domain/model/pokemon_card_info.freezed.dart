@@ -21,7 +21,9 @@ mixin _$PokemonCardInfo {
   String get imageUrl => throw _privateConstructorUsedError;
   List<PokemonType> get types => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonCardInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PokemonCardInfoCopyWith<PokemonCardInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -46,6 +48,8 @@ class _$PokemonCardInfoCopyWithImpl<$Res, $Val extends PokemonCardInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PokemonCardInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -95,6 +99,8 @@ class __$$PokemonCardInfoImplCopyWithImpl<$Res>
       _$PokemonCardInfoImpl _value, $Res Function(_$PokemonCardInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PokemonCardInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,7 +176,9 @@ class _$PokemonCardInfoImpl implements _PokemonCardInfo {
   int get hashCode => Object.hash(runtimeType, pokedexId, name, imageUrl,
       const DeepCollectionEquality().hash(_types));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PokemonCardInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PokemonCardInfoImplCopyWith<_$PokemonCardInfoImpl> get copyWith =>
@@ -193,8 +201,11 @@ abstract class _PokemonCardInfo implements PokemonCardInfo {
   String get imageUrl;
   @override
   List<PokemonType> get types;
+
+  /// Create a copy of PokemonCardInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PokemonCardInfoImplCopyWith<_$PokemonCardInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

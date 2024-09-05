@@ -13,9 +13,9 @@ import 'package:pokedex/presentation/viewmodel/pokemon_list_view_model.dart';
 @RoutePage()
 class RegionDetailScreen extends HookConsumerWidget {
   const RegionDetailScreen({
-    Key? key,
+    super.key,
     required this.regionType,
-  }) : super(key: key);
+  });
 
   final RegionType regionType;
 

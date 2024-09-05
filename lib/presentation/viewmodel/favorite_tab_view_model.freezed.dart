@@ -19,7 +19,9 @@ mixin _$FavoriteTabViewModelState {
   bool get isLoading => throw _privateConstructorUsedError;
   List<PokemonCardInfo> get list => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FavoriteTabViewModelState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FavoriteTabViewModelStateCopyWith<FavoriteTabViewModelState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -44,6 +46,8 @@ class _$FavoriteTabViewModelStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FavoriteTabViewModelState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,6 +89,8 @@ class __$$FavoriteTabViewModelStateImplCopyWithImpl<$Res>
       $Res Function(_$FavoriteTabViewModelStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FavoriteTabViewModelState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,7 +146,9 @@ class _$FavoriteTabViewModelStateImpl implements _FavoriteTabViewModelState {
   int get hashCode => Object.hash(
       runtimeType, isLoading, const DeepCollectionEquality().hash(_list));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FavoriteTabViewModelState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FavoriteTabViewModelStateImplCopyWith<_$FavoriteTabViewModelStateImpl>
@@ -158,8 +166,11 @@ abstract class _FavoriteTabViewModelState implements FavoriteTabViewModelState {
   bool get isLoading;
   @override
   List<PokemonCardInfo> get list;
+
+  /// Create a copy of FavoriteTabViewModelState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FavoriteTabViewModelStateImplCopyWith<_$FavoriteTabViewModelStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
