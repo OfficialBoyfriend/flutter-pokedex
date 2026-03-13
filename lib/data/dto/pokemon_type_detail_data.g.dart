@@ -6,29 +6,25 @@ part of 'pokemon_type_detail_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PokemonTypeDetailDataImpl _$$PokemonTypeDetailDataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PokemonTypeDetailDataImpl(
-      demageRelations: DamageRelationsData.fromJson(
-          json['damage_relations'] as Map<String, dynamic>),
-    );
+_PokemonTypeDetailData _$PokemonTypeDetailDataFromJson(
+  Map<String, dynamic> json,
+) => _PokemonTypeDetailData(
+  demageRelations: DamageRelationsData.fromJson(
+    json['damage_relations'] as Map<String, dynamic>,
+  ),
+);
 
-Map<String, dynamic> _$$PokemonTypeDetailDataImplToJson(
-        _$PokemonTypeDetailDataImpl instance) =>
-    <String, dynamic>{
-      'damage_relations': instance.demageRelations,
-    };
+Map<String, dynamic> _$PokemonTypeDetailDataToJson(
+  _PokemonTypeDetailData instance,
+) => <String, dynamic>{'damage_relations': instance.demageRelations};
 
-_$DamageRelationsDataImpl _$$DamageRelationsDataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$DamageRelationsDataImpl(
+_DamageRelationsData _$DamageRelationsDataFromJson(Map<String, dynamic> json) =>
+    _DamageRelationsData(
       doubleDamageFrom: (json['double_damage_from'] as List<dynamic>)
           .map((e) => NameUrlData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$DamageRelationsDataImplToJson(
-        _$DamageRelationsDataImpl instance) =>
-    <String, dynamic>{
-      'double_damage_from': instance.doubleDamageFrom,
-    };
+Map<String, dynamic> _$DamageRelationsDataToJson(
+  _DamageRelationsData instance,
+) => <String, dynamic>{'double_damage_from': instance.doubleDamageFrom};

@@ -5,7 +5,7 @@ part 'pokemon_data.freezed.dart';
 part 'pokemon_data.g.dart';
 
 @freezed
-class PokemonData with _$PokemonData {
+abstract class PokemonData with _$PokemonData {
   const factory PokemonData({
     required int id,
     required String name,
@@ -20,9 +20,8 @@ class PokemonData with _$PokemonData {
       _$PokemonDataFromJson(json);
 }
 
-
 @freezed
-class PokemonTypeData with _$PokemonTypeData {
+abstract class PokemonTypeData with _$PokemonTypeData {
   const factory PokemonTypeData({
     required int slot,
     required NameUrlData type,
@@ -30,14 +29,12 @@ class PokemonTypeData with _$PokemonTypeData {
 
   factory PokemonTypeData.fromJson(Map<String, dynamic> json) =>
       _$PokemonTypeDataFromJson(json);
-  
 }
 
 @freezed
-class SpritesData with _$SpritesData {
+abstract class SpritesData with _$SpritesData {
   const factory SpritesData({
-    @JsonKey(name: 'front_default')
-    required String frontDefault,
+    @JsonKey(name: 'front_default') required String frontDefault,
     required OtherData other,
   }) = _SpritesData;
 
@@ -46,20 +43,17 @@ class SpritesData with _$SpritesData {
 }
 
 @freezed
-class OtherData with _$OtherData {
-  const factory OtherData({
-    required ImageUrlSetData showdown,
-  }) = _OtherData;
+abstract class OtherData with _$OtherData {
+  const factory OtherData({required ImageUrlSetData showdown}) = _OtherData;
 
   factory OtherData.fromJson(Map<String, dynamic> json) =>
       _$OtherDataFromJson(json);
 }
 
 @freezed
-class PokemonAbilityData with _$PokemonAbilityData {
-  const factory PokemonAbilityData({
-    required NameUrlData ability,
-  }) = _PokemonAbilityData;
+abstract class PokemonAbilityData with _$PokemonAbilityData {
+  const factory PokemonAbilityData({required NameUrlData ability}) =
+      _PokemonAbilityData;
 
   factory PokemonAbilityData.fromJson(Map<String, dynamic> json) =>
       _$PokemonAbilityDataFromJson(json);

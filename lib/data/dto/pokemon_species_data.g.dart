@@ -6,9 +6,8 @@ part of 'pokemon_species_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PokemonSpeciesDataImpl _$$PokemonSpeciesDataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$PokemonSpeciesDataImpl(
+_PokemonSpeciesData _$PokemonSpeciesDataFromJson(Map<String, dynamic> json) =>
+    _PokemonSpeciesData(
       genderRate: (json['gender_rate'] as num).toInt(),
       flavorTextEntries: (json['flavor_text_entries'] as List<dynamic>)
           .map((e) => FlavorTextEntry.fromJson(e as Map<String, dynamic>))
@@ -16,12 +15,12 @@ _$PokemonSpeciesDataImpl _$$PokemonSpeciesDataImplFromJson(
       genera: (json['genera'] as List<dynamic>)
           .map((e) => GeneraData.fromJson(e as Map<String, dynamic>))
           .toList(),
-      evolutionChain:
-          UrlData.fromJson(json['evolution_chain'] as Map<String, dynamic>),
+      evolutionChain: UrlData.fromJson(
+        json['evolution_chain'] as Map<String, dynamic>,
+      ),
     );
 
-Map<String, dynamic> _$$PokemonSpeciesDataImplToJson(
-        _$PokemonSpeciesDataImpl instance) =>
+Map<String, dynamic> _$PokemonSpeciesDataToJson(_PokemonSpeciesData instance) =>
     <String, dynamic>{
       'gender_rate': instance.genderRate,
       'flavor_text_entries': instance.flavorTextEntries,
@@ -29,28 +28,22 @@ Map<String, dynamic> _$$PokemonSpeciesDataImplToJson(
       'evolution_chain': instance.evolutionChain,
     };
 
-_$FlavorTextEntryImpl _$$FlavorTextEntryImplFromJson(
-        Map<String, dynamic> json) =>
-    _$FlavorTextEntryImpl(
+_FlavorTextEntry _$FlavorTextEntryFromJson(Map<String, dynamic> json) =>
+    _FlavorTextEntry(
       flavorText: json['flavor_text'] as String,
       language: NameUrlData.fromJson(json['language'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$FlavorTextEntryImplToJson(
-        _$FlavorTextEntryImpl instance) =>
+Map<String, dynamic> _$FlavorTextEntryToJson(_FlavorTextEntry instance) =>
     <String, dynamic>{
       'flavor_text': instance.flavorText,
       'language': instance.language,
     };
 
-_$GeneraDataImpl _$$GeneraDataImplFromJson(Map<String, dynamic> json) =>
-    _$GeneraDataImpl(
-      genus: json['genus'] as String,
-      language: NameUrlData.fromJson(json['language'] as Map<String, dynamic>),
-    );
+_GeneraData _$GeneraDataFromJson(Map<String, dynamic> json) => _GeneraData(
+  genus: json['genus'] as String,
+  language: NameUrlData.fromJson(json['language'] as Map<String, dynamic>),
+);
 
-Map<String, dynamic> _$$GeneraDataImplToJson(_$GeneraDataImpl instance) =>
-    <String, dynamic>{
-      'genus': instance.genus,
-      'language': instance.language,
-    };
+Map<String, dynamic> _$GeneraDataToJson(_GeneraData instance) =>
+    <String, dynamic>{'genus': instance.genus, 'language': instance.language};

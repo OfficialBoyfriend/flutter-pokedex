@@ -1,7 +1,7 @@
 import 'dart:async';
 
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pokedex/domain/model/pokemon_card_info.dart';
 import 'package:pokedex/domain/usecase/gat_favorite_pokemon_card_info_list_usecase.dart';
 import 'package:pokedex/domain/usecase/remove_favorite_pokedex_id_usecase.dart';
@@ -10,7 +10,7 @@ import 'package:pokedex/domain/usecase/watch_favorite_pokemon_card_info_list_use
 part 'favorite_tab_view_model.freezed.dart';
 
 @freezed
-class FavoriteTabViewModelState with _$FavoriteTabViewModelState {
+abstract class FavoriteTabViewModelState with _$FavoriteTabViewModelState {
   const factory FavoriteTabViewModelState({
     required bool isLoading,
     required List<PokemonCardInfo> list,
@@ -53,17 +53,24 @@ class FavoriteTabViewModel extends StateNotifier<FavoriteTabViewModelState> {
   }
 }
 
-final favoriteTabViewModelProvider = StateNotifierProvider.autoDispose<
-    FavoriteTabViewModel, FavoriteTabViewModelState>((ref) {
-  final watchUsecase =
-      ref.watch(watchFavoritePokemonCardInfoListUsecaseProvider);
-  final getUsecase = ref.watch(getFavoritePokemonCardInfoListUsecaseProvider);
-  final removeUsecase = ref.watch(removeFavoritePokedexIdUseCaseProvider);
+final favoriteTabViewModelProvider =
+    StateNotifierProvider.autoDispose<
+      FavoriteTabViewModel,
+      FavoriteTabViewModelState
+    >((ref) {
+      final watchUsecase = ref.watch(
+        watchFavoritePokemonCardInfoListUsecaseProvider,
+      );
+      final getUsecase = ref.watch(
+        getFavoritePokemonCardInfoListUsecaseProvider,
+      );
+      final removeUsecase = ref.watch(removeFavoritePokedexIdUseCaseProvider);
 
-  ref.keepAlive();
+      ref.keepAlive();
 
-  return FavoriteTabViewModel(
-      watchUsecase: watchUsecase,
-      getUsecase: getUsecase,
-      removeUsecase: removeUsecase);
-});
+      return FavoriteTabViewModel(
+        watchUsecase: watchUsecase,
+        getUsecase: getUsecase,
+        removeUsecase: removeUsecase,
+      );
+    });

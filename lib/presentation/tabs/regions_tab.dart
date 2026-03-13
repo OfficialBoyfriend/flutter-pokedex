@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -60,7 +59,7 @@ class _RegionItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.pushRoute(RegionDetailRoute(regionType: region));
+        RegionDetailRoute(regionType: region).push(context);
       },
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12),

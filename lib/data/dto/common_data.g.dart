@@ -6,36 +6,21 @@ part of 'common_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$NameUrlDataImpl _$$NameUrlDataImplFromJson(Map<String, dynamic> json) =>
-    _$NameUrlDataImpl(
-      name: json['name'] as String,
-      url: json['url'] as String,
-    );
+_NameUrlData _$NameUrlDataFromJson(Map<String, dynamic> json) =>
+    _NameUrlData(name: json['name'] as String, url: json['url'] as String);
 
-Map<String, dynamic> _$$NameUrlDataImplToJson(_$NameUrlDataImpl instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'url': instance.url,
-    };
+Map<String, dynamic> _$NameUrlDataToJson(_NameUrlData instance) =>
+    <String, dynamic>{'name': instance.name, 'url': instance.url};
 
-_$UrlDataImpl _$$UrlDataImplFromJson(Map<String, dynamic> json) =>
-    _$UrlDataImpl(
-      url: json['url'] as String,
-    );
+_UrlData _$UrlDataFromJson(Map<String, dynamic> json) =>
+    _UrlData(url: json['url'] as String);
 
-Map<String, dynamic> _$$UrlDataImplToJson(_$UrlDataImpl instance) =>
-    <String, dynamic>{
-      'url': instance.url,
-    };
+Map<String, dynamic> _$UrlDataToJson(_UrlData instance) => <String, dynamic>{
+  'url': instance.url,
+};
 
-_$ImageUrlSetDataImpl _$$ImageUrlSetDataImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ImageUrlSetDataImpl(
-      frontDefault: json['front_default'] as String,
-    );
+_ImageUrlSetData _$ImageUrlSetDataFromJson(Map<String, dynamic> json) =>
+    _ImageUrlSetData(frontDefault: json['front_default'] as String);
 
-Map<String, dynamic> _$$ImageUrlSetDataImplToJson(
-        _$ImageUrlSetDataImpl instance) =>
-    <String, dynamic>{
-      'front_default': instance.frontDefault,
-    };
+Map<String, dynamic> _$ImageUrlSetDataToJson(_ImageUrlSetData instance) =>
+    <String, dynamic>{'front_default': instance.frontDefault};

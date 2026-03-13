@@ -6,14 +6,13 @@ part 'pokemon_species_data.freezed.dart';
 part 'pokemon_species_data.g.dart';
 
 @freezed
-class PokemonSpeciesData with _$PokemonSpeciesData {
+abstract class PokemonSpeciesData with _$PokemonSpeciesData {
   const factory PokemonSpeciesData({
     @JsonKey(name: 'gender_rate') required int genderRate,
     @JsonKey(name: 'flavor_text_entries')
     required List<FlavorTextEntry> flavorTextEntries,
     required List<GeneraData> genera,
-    @JsonKey(name: 'evolution_chain')
-    required UrlData evolutionChain,
+    @JsonKey(name: 'evolution_chain') required UrlData evolutionChain,
   }) = _PokemonSpeciesData;
 
   factory PokemonSpeciesData.fromJson(Map<String, dynamic> json) =>
@@ -21,10 +20,9 @@ class PokemonSpeciesData with _$PokemonSpeciesData {
 }
 
 @freezed
-class FlavorTextEntry with _$FlavorTextEntry {
+abstract class FlavorTextEntry with _$FlavorTextEntry {
   factory FlavorTextEntry({
-    @JsonKey(name: 'flavor_text')
-    required String flavorText,
+    @JsonKey(name: 'flavor_text') required String flavorText,
     required NameUrlData language,
   }) = _FlavorTextEntry;
 
@@ -33,11 +31,9 @@ class FlavorTextEntry with _$FlavorTextEntry {
 }
 
 @freezed
-class GeneraData with _$GeneraData {
-  factory GeneraData({
-    required String genus,
-    required NameUrlData language,
-  }) = _GeneraData;
+abstract class GeneraData with _$GeneraData {
+  factory GeneraData({required String genus, required NameUrlData language}) =
+      _GeneraData;
 
   factory GeneraData.fromJson(Map<String, dynamic> json) =>
       _$GeneraDataFromJson(json);

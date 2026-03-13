@@ -1,7 +1,7 @@
 import 'dart:async';
 
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pokedex/domain/usecase/add_favorite_pokedex_id_usecase.dart';
 import 'package:pokedex/domain/usecase/is_favorite_pokedex_id_usecase.dart';
 import 'package:pokedex/domain/usecase/remove_favorite_pokedex_id_usecase.dart';
@@ -9,10 +9,9 @@ import 'package:pokedex/domain/usecase/remove_favorite_pokedex_id_usecase.dart';
 part 'favorite_button_view_model.freezed.dart';
 
 @freezed
-class FavoriteButtonState with _$FavoriteButtonState {
-  factory FavoriteButtonState({
-    required bool isFavorite,
-  }) = _FavoriteButtonState;
+abstract class FavoriteButtonState with _$FavoriteButtonState {
+  factory FavoriteButtonState({required bool isFavorite}) =
+      _FavoriteButtonState;
 }
 
 class FavoriteButtonViewModel extends StateNotifier<FavoriteButtonState> {
@@ -33,18 +32,15 @@ class FavoriteButtonViewModel extends StateNotifier<FavoriteButtonState> {
   StreamSubscription? _subscription;
 
   Future<void> _init() async {
-    _subscription =
-        watchIsFavoritePokedexIdUseCase.watch(pokedexId).listen((isFavorite) {
-      state = state.copyWith(
-        isFavorite: isFavorite,
-      );
+    _subscription = watchIsFavoritePokedexIdUseCase.watch(pokedexId).listen((
+      isFavorite,
+    ) {
+      state = state.copyWith(isFavorite: isFavorite);
     });
 
     final isFavorite = await watchIsFavoritePokedexIdUseCase.execute(pokedexId);
 
-    state = state.copyWith(
-      isFavorite: isFavorite,
-    );
+    state = state.copyWith(isFavorite: isFavorite);
   }
 
   @override
@@ -60,26 +56,29 @@ class FavoriteButtonViewModel extends StateNotifier<FavoriteButtonState> {
       await addFavoritePokedexIdUseCase.execute(pokedexId);
     }
 
-    state = state.copyWith(
-      isFavorite: !state.isFavorite,
-    );
+    state = state.copyWith(isFavorite: !state.isFavorite);
   }
 }
 
 final favoriteButtonViewModelProvider = StateNotifierProvider.autoDispose
-    .family<FavoriteButtonViewModel, FavoriteButtonState, int>(
-        (ref, pokedexId) {
-  final addFavoritePokedexIdUseCase =
-      ref.watch(addFavoritePokedexIdUseCaseProvider);
-  final removeFavoritePokedexIdUseCase =
-      ref.watch(removeFavoritePokedexIdUseCaseProvider);
-  final watchIsFavoritePokedexIdUseCase =
-      ref.watch(watchIsFavoritePokedexIdUseCaseProvider);
+    .family<FavoriteButtonViewModel, FavoriteButtonState, int>((
+      ref,
+      pokedexId,
+    ) {
+      final addFavoritePokedexIdUseCase = ref.watch(
+        addFavoritePokedexIdUseCaseProvider,
+      );
+      final removeFavoritePokedexIdUseCase = ref.watch(
+        removeFavoritePokedexIdUseCaseProvider,
+      );
+      final watchIsFavoritePokedexIdUseCase = ref.watch(
+        watchIsFavoritePokedexIdUseCaseProvider,
+      );
 
-  return FavoriteButtonViewModel(
-    pokedexId: pokedexId,
-    addFavoritePokedexIdUseCase: addFavoritePokedexIdUseCase,
-    removeFavoritePokedexIdUseCase: removeFavoritePokedexIdUseCase,
-    watchIsFavoritePokedexIdUseCase: watchIsFavoritePokedexIdUseCase,
-  );
-});
+      return FavoriteButtonViewModel(
+        pokedexId: pokedexId,
+        addFavoritePokedexIdUseCase: addFavoritePokedexIdUseCase,
+        removeFavoritePokedexIdUseCase: removeFavoritePokedexIdUseCase,
+        watchIsFavoritePokedexIdUseCase: watchIsFavoritePokedexIdUseCase,
+      );
+    });

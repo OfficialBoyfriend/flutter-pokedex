@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,347 +9,577 @@ part of 'pokemon_evolution_chain_data.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-PokemonEvolutionChainData _$PokemonEvolutionChainDataFromJson(
-    Map<String, dynamic> json) {
-  return _PokemonEvolutionChainData.fromJson(json);
-}
 
 /// @nodoc
 mixin _$PokemonEvolutionChainData {
-  ChainData get chain => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $PokemonEvolutionChainDataCopyWith<PokemonEvolutionChainData> get copyWith =>
-      throw _privateConstructorUsedError;
+ ChainData get chain;
+/// Create a copy of PokemonEvolutionChainData
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PokemonEvolutionChainDataCopyWith<PokemonEvolutionChainData> get copyWith => _$PokemonEvolutionChainDataCopyWithImpl<PokemonEvolutionChainData>(this as PokemonEvolutionChainData, _$identity);
+
+  /// Serializes this PokemonEvolutionChainData to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PokemonEvolutionChainData&&(identical(other.chain, chain) || other.chain == chain));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,chain);
+
+@override
+String toString() {
+  return 'PokemonEvolutionChainData(chain: $chain)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $PokemonEvolutionChainDataCopyWith<$Res> {
-  factory $PokemonEvolutionChainDataCopyWith(PokemonEvolutionChainData value,
-          $Res Function(PokemonEvolutionChainData) then) =
-      _$PokemonEvolutionChainDataCopyWithImpl<$Res, PokemonEvolutionChainData>;
-  @useResult
-  $Res call({ChainData chain});
+abstract mixin class $PokemonEvolutionChainDataCopyWith<$Res>  {
+  factory $PokemonEvolutionChainDataCopyWith(PokemonEvolutionChainData value, $Res Function(PokemonEvolutionChainData) _then) = _$PokemonEvolutionChainDataCopyWithImpl;
+@useResult
+$Res call({
+ ChainData chain
+});
 
-  $ChainDataCopyWith<$Res> get chain;
+
+$ChainDataCopyWith<$Res> get chain;
+
 }
-
 /// @nodoc
-class _$PokemonEvolutionChainDataCopyWithImpl<$Res,
-        $Val extends PokemonEvolutionChainData>
+class _$PokemonEvolutionChainDataCopyWithImpl<$Res>
     implements $PokemonEvolutionChainDataCopyWith<$Res> {
-  _$PokemonEvolutionChainDataCopyWithImpl(this._value, this._then);
+  _$PokemonEvolutionChainDataCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final PokemonEvolutionChainData _self;
+  final $Res Function(PokemonEvolutionChainData) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? chain = null,
-  }) {
-    return _then(_value.copyWith(
-      chain: null == chain
-          ? _value.chain
-          : chain // ignore: cast_nullable_to_non_nullable
-              as ChainData,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ChainDataCopyWith<$Res> get chain {
-    return $ChainDataCopyWith<$Res>(_value.chain, (value) {
-      return _then(_value.copyWith(chain: value) as $Val);
-    });
-  }
+/// Create a copy of PokemonEvolutionChainData
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? chain = null,}) {
+  return _then(_self.copyWith(
+chain: null == chain ? _self.chain : chain // ignore: cast_nullable_to_non_nullable
+as ChainData,
+  ));
+}
+/// Create a copy of PokemonEvolutionChainData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ChainDataCopyWith<$Res> get chain {
+  
+  return $ChainDataCopyWith<$Res>(_self.chain, (value) {
+    return _then(_self.copyWith(chain: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$PokemonEvolutionChainDataImplCopyWith<$Res>
-    implements $PokemonEvolutionChainDataCopyWith<$Res> {
-  factory _$$PokemonEvolutionChainDataImplCopyWith(
-          _$PokemonEvolutionChainDataImpl value,
-          $Res Function(_$PokemonEvolutionChainDataImpl) then) =
-      __$$PokemonEvolutionChainDataImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({ChainData chain});
 
-  @override
-  $ChainDataCopyWith<$Res> get chain;
+/// Adds pattern-matching-related methods to [PokemonEvolutionChainData].
+extension PokemonEvolutionChainDataPatterns on PokemonEvolutionChainData {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PokemonEvolutionChainData value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainData() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PokemonEvolutionChainData value)  $default,){
+final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainData():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PokemonEvolutionChainData value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainData() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( ChainData chain)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainData() when $default != null:
+return $default(_that.chain);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( ChainData chain)  $default,) {final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainData():
+return $default(_that.chain);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( ChainData chain)?  $default,) {final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainData() when $default != null:
+return $default(_that.chain);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$PokemonEvolutionChainDataImplCopyWithImpl<$Res>
-    extends _$PokemonEvolutionChainDataCopyWithImpl<$Res,
-        _$PokemonEvolutionChainDataImpl>
-    implements _$$PokemonEvolutionChainDataImplCopyWith<$Res> {
-  __$$PokemonEvolutionChainDataImplCopyWithImpl(
-      _$PokemonEvolutionChainDataImpl _value,
-      $Res Function(_$PokemonEvolutionChainDataImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? chain = null,
-  }) {
-    return _then(_$PokemonEvolutionChainDataImpl(
-      chain: null == chain
-          ? _value.chain
-          : chain // ignore: cast_nullable_to_non_nullable
-              as ChainData,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$PokemonEvolutionChainDataImpl implements _PokemonEvolutionChainData {
-  const _$PokemonEvolutionChainDataImpl({required this.chain});
 
-  factory _$PokemonEvolutionChainDataImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PokemonEvolutionChainDataImplFromJson(json);
+class _PokemonEvolutionChainData implements PokemonEvolutionChainData {
+  const _PokemonEvolutionChainData({required this.chain});
+  factory _PokemonEvolutionChainData.fromJson(Map<String, dynamic> json) => _$PokemonEvolutionChainDataFromJson(json);
 
-  @override
-  final ChainData chain;
+@override final  ChainData chain;
 
-  @override
-  String toString() {
-    return 'PokemonEvolutionChainData(chain: $chain)';
-  }
+/// Create a copy of PokemonEvolutionChainData
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$PokemonEvolutionChainDataCopyWith<_PokemonEvolutionChainData> get copyWith => __$PokemonEvolutionChainDataCopyWithImpl<_PokemonEvolutionChainData>(this, _$identity);
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PokemonEvolutionChainDataImpl &&
-            (identical(other.chain, chain) || other.chain == chain));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, chain);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PokemonEvolutionChainDataImplCopyWith<_$PokemonEvolutionChainDataImpl>
-      get copyWith => __$$PokemonEvolutionChainDataImplCopyWithImpl<
-          _$PokemonEvolutionChainDataImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$PokemonEvolutionChainDataImplToJson(
-      this,
-    );
-  }
+@override
+Map<String, dynamic> toJson() {
+  return _$PokemonEvolutionChainDataToJson(this, );
 }
 
-abstract class _PokemonEvolutionChainData implements PokemonEvolutionChainData {
-  const factory _PokemonEvolutionChainData({required final ChainData chain}) =
-      _$PokemonEvolutionChainDataImpl;
-
-  factory _PokemonEvolutionChainData.fromJson(Map<String, dynamic> json) =
-      _$PokemonEvolutionChainDataImpl.fromJson;
-
-  @override
-  ChainData get chain;
-  @override
-  @JsonKey(ignore: true)
-  _$$PokemonEvolutionChainDataImplCopyWith<_$PokemonEvolutionChainDataImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PokemonEvolutionChainData&&(identical(other.chain, chain) || other.chain == chain));
 }
 
-ChainData _$ChainDataFromJson(Map<String, dynamic> json) {
-  return _ChainData.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,chain);
+
+@override
+String toString() {
+  return 'PokemonEvolutionChainData(chain: $chain)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$PokemonEvolutionChainDataCopyWith<$Res> implements $PokemonEvolutionChainDataCopyWith<$Res> {
+  factory _$PokemonEvolutionChainDataCopyWith(_PokemonEvolutionChainData value, $Res Function(_PokemonEvolutionChainData) _then) = __$PokemonEvolutionChainDataCopyWithImpl;
+@override @useResult
+$Res call({
+ ChainData chain
+});
+
+
+@override $ChainDataCopyWith<$Res> get chain;
+
+}
+/// @nodoc
+class __$PokemonEvolutionChainDataCopyWithImpl<$Res>
+    implements _$PokemonEvolutionChainDataCopyWith<$Res> {
+  __$PokemonEvolutionChainDataCopyWithImpl(this._self, this._then);
+
+  final _PokemonEvolutionChainData _self;
+  final $Res Function(_PokemonEvolutionChainData) _then;
+
+/// Create a copy of PokemonEvolutionChainData
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? chain = null,}) {
+  return _then(_PokemonEvolutionChainData(
+chain: null == chain ? _self.chain : chain // ignore: cast_nullable_to_non_nullable
+as ChainData,
+  ));
+}
+
+/// Create a copy of PokemonEvolutionChainData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$ChainDataCopyWith<$Res> get chain {
+  
+  return $ChainDataCopyWith<$Res>(_self.chain, (value) {
+    return _then(_self.copyWith(chain: value));
+  });
+}
+}
+
 
 /// @nodoc
 mixin _$ChainData {
-  @JsonKey(name: 'evolves_to')
-  List<ChainData> get evolvesTo => throw _privateConstructorUsedError;
-  NameUrlData get species => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ChainDataCopyWith<ChainData> get copyWith =>
-      throw _privateConstructorUsedError;
+@JsonKey(name: 'evolves_to') List<ChainData> get evolvesTo; NameUrlData get species;
+/// Create a copy of ChainData
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ChainDataCopyWith<ChainData> get copyWith => _$ChainDataCopyWithImpl<ChainData>(this as ChainData, _$identity);
+
+  /// Serializes this ChainData to a JSON map.
+  Map<String, dynamic> toJson();
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ChainData&&const DeepCollectionEquality().equals(other.evolvesTo, evolvesTo)&&(identical(other.species, species) || other.species == species));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(evolvesTo),species);
+
+@override
+String toString() {
+  return 'ChainData(evolvesTo: $evolvesTo, species: $species)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $ChainDataCopyWith<$Res> {
-  factory $ChainDataCopyWith(ChainData value, $Res Function(ChainData) then) =
-      _$ChainDataCopyWithImpl<$Res, ChainData>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'evolves_to') List<ChainData> evolvesTo,
-      NameUrlData species});
+abstract mixin class $ChainDataCopyWith<$Res>  {
+  factory $ChainDataCopyWith(ChainData value, $Res Function(ChainData) _then) = _$ChainDataCopyWithImpl;
+@useResult
+$Res call({
+@JsonKey(name: 'evolves_to') List<ChainData> evolvesTo, NameUrlData species
+});
 
-  $NameUrlDataCopyWith<$Res> get species;
+
+$NameUrlDataCopyWith<$Res> get species;
+
 }
-
 /// @nodoc
-class _$ChainDataCopyWithImpl<$Res, $Val extends ChainData>
+class _$ChainDataCopyWithImpl<$Res>
     implements $ChainDataCopyWith<$Res> {
-  _$ChainDataCopyWithImpl(this._value, this._then);
+  _$ChainDataCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final ChainData _self;
+  final $Res Function(ChainData) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? evolvesTo = null,
-    Object? species = null,
-  }) {
-    return _then(_value.copyWith(
-      evolvesTo: null == evolvesTo
-          ? _value.evolvesTo
-          : evolvesTo // ignore: cast_nullable_to_non_nullable
-              as List<ChainData>,
-      species: null == species
-          ? _value.species
-          : species // ignore: cast_nullable_to_non_nullable
-              as NameUrlData,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $NameUrlDataCopyWith<$Res> get species {
-    return $NameUrlDataCopyWith<$Res>(_value.species, (value) {
-      return _then(_value.copyWith(species: value) as $Val);
-    });
-  }
+/// Create a copy of ChainData
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? evolvesTo = null,Object? species = null,}) {
+  return _then(_self.copyWith(
+evolvesTo: null == evolvesTo ? _self.evolvesTo : evolvesTo // ignore: cast_nullable_to_non_nullable
+as List<ChainData>,species: null == species ? _self.species : species // ignore: cast_nullable_to_non_nullable
+as NameUrlData,
+  ));
+}
+/// Create a copy of ChainData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$NameUrlDataCopyWith<$Res> get species {
+  
+  return $NameUrlDataCopyWith<$Res>(_self.species, (value) {
+    return _then(_self.copyWith(species: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$ChainDataImplCopyWith<$Res>
-    implements $ChainDataCopyWith<$Res> {
-  factory _$$ChainDataImplCopyWith(
-          _$ChainDataImpl value, $Res Function(_$ChainDataImpl) then) =
-      __$$ChainDataImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: 'evolves_to') List<ChainData> evolvesTo,
-      NameUrlData species});
 
-  @override
-  $NameUrlDataCopyWith<$Res> get species;
+/// Adds pattern-matching-related methods to [ChainData].
+extension ChainDataPatterns on ChainData {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ChainData value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _ChainData() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ChainData value)  $default,){
+final _that = this;
+switch (_that) {
+case _ChainData():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ChainData value)?  $default,){
+final _that = this;
+switch (_that) {
+case _ChainData() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function(@JsonKey(name: 'evolves_to')  List<ChainData> evolvesTo,  NameUrlData species)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _ChainData() when $default != null:
+return $default(_that.evolvesTo,_that.species);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function(@JsonKey(name: 'evolves_to')  List<ChainData> evolvesTo,  NameUrlData species)  $default,) {final _that = this;
+switch (_that) {
+case _ChainData():
+return $default(_that.evolvesTo,_that.species);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function(@JsonKey(name: 'evolves_to')  List<ChainData> evolvesTo,  NameUrlData species)?  $default,) {final _that = this;
+switch (_that) {
+case _ChainData() when $default != null:
+return $default(_that.evolvesTo,_that.species);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$ChainDataImplCopyWithImpl<$Res>
-    extends _$ChainDataCopyWithImpl<$Res, _$ChainDataImpl>
-    implements _$$ChainDataImplCopyWith<$Res> {
-  __$$ChainDataImplCopyWithImpl(
-      _$ChainDataImpl _value, $Res Function(_$ChainDataImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? evolvesTo = null,
-    Object? species = null,
-  }) {
-    return _then(_$ChainDataImpl(
-      evolvesTo: null == evolvesTo
-          ? _value._evolvesTo
-          : evolvesTo // ignore: cast_nullable_to_non_nullable
-              as List<ChainData>,
-      species: null == species
-          ? _value.species
-          : species // ignore: cast_nullable_to_non_nullable
-              as NameUrlData,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ChainDataImpl implements _ChainData {
-  const _$ChainDataImpl(
-      {@JsonKey(name: 'evolves_to') required final List<ChainData> evolvesTo,
-      required this.species})
-      : _evolvesTo = evolvesTo;
 
-  factory _$ChainDataImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ChainDataImplFromJson(json);
+class _ChainData implements ChainData {
+  const _ChainData({@JsonKey(name: 'evolves_to') required final  List<ChainData> evolvesTo, required this.species}): _evolvesTo = evolvesTo;
+  factory _ChainData.fromJson(Map<String, dynamic> json) => _$ChainDataFromJson(json);
 
-  final List<ChainData> _evolvesTo;
-  @override
-  @JsonKey(name: 'evolves_to')
-  List<ChainData> get evolvesTo {
-    if (_evolvesTo is EqualUnmodifiableListView) return _evolvesTo;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_evolvesTo);
-  }
-
-  @override
-  final NameUrlData species;
-
-  @override
-  String toString() {
-    return 'ChainData(evolvesTo: $evolvesTo, species: $species)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ChainDataImpl &&
-            const DeepCollectionEquality()
-                .equals(other._evolvesTo, _evolvesTo) &&
-            (identical(other.species, species) || other.species == species));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_evolvesTo), species);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ChainDataImplCopyWith<_$ChainDataImpl> get copyWith =>
-      __$$ChainDataImplCopyWithImpl<_$ChainDataImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ChainDataImplToJson(
-      this,
-    );
-  }
+ final  List<ChainData> _evolvesTo;
+@override@JsonKey(name: 'evolves_to') List<ChainData> get evolvesTo {
+  if (_evolvesTo is EqualUnmodifiableListView) return _evolvesTo;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_evolvesTo);
 }
 
-abstract class _ChainData implements ChainData {
-  const factory _ChainData(
-      {@JsonKey(name: 'evolves_to') required final List<ChainData> evolvesTo,
-      required final NameUrlData species}) = _$ChainDataImpl;
+@override final  NameUrlData species;
 
-  factory _ChainData.fromJson(Map<String, dynamic> json) =
-      _$ChainDataImpl.fromJson;
+/// Create a copy of ChainData
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ChainDataCopyWith<_ChainData> get copyWith => __$ChainDataCopyWithImpl<_ChainData>(this, _$identity);
 
-  @override
-  @JsonKey(name: 'evolves_to')
-  List<ChainData> get evolvesTo;
-  @override
-  NameUrlData get species;
-  @override
-  @JsonKey(ignore: true)
-  _$$ChainDataImplCopyWith<_$ChainDataImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+Map<String, dynamic> toJson() {
+  return _$ChainDataToJson(this, );
 }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChainData&&const DeepCollectionEquality().equals(other._evolvesTo, _evolvesTo)&&(identical(other.species, species) || other.species == species));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_evolvesTo),species);
+
+@override
+String toString() {
+  return 'ChainData(evolvesTo: $evolvesTo, species: $species)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ChainDataCopyWith<$Res> implements $ChainDataCopyWith<$Res> {
+  factory _$ChainDataCopyWith(_ChainData value, $Res Function(_ChainData) _then) = __$ChainDataCopyWithImpl;
+@override @useResult
+$Res call({
+@JsonKey(name: 'evolves_to') List<ChainData> evolvesTo, NameUrlData species
+});
+
+
+@override $NameUrlDataCopyWith<$Res> get species;
+
+}
+/// @nodoc
+class __$ChainDataCopyWithImpl<$Res>
+    implements _$ChainDataCopyWith<$Res> {
+  __$ChainDataCopyWithImpl(this._self, this._then);
+
+  final _ChainData _self;
+  final $Res Function(_ChainData) _then;
+
+/// Create a copy of ChainData
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? evolvesTo = null,Object? species = null,}) {
+  return _then(_ChainData(
+evolvesTo: null == evolvesTo ? _self._evolvesTo : evolvesTo // ignore: cast_nullable_to_non_nullable
+as List<ChainData>,species: null == species ? _self.species : species // ignore: cast_nullable_to_non_nullable
+as NameUrlData,
+  ));
+}
+
+/// Create a copy of ChainData
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$NameUrlDataCopyWith<$Res> get species {
+  
+  return $NameUrlDataCopyWith<$Res>(_self.species, (value) {
+    return _then(_self.copyWith(species: value));
+  });
+}
+}
+
+// dart format on

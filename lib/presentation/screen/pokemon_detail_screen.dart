@@ -3,13 +3,13 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:auto_route/auto_route.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:pokedex/domain/model/pokemon_detail_info.dart';
 import 'package:pokedex/gen/assets.gen.dart';
 import 'package:pokedex/presentation/components/pokemon_evolution_info_view.dart';
@@ -21,7 +21,6 @@ import 'package:pokedex/presentation/viewmodel/pokemon_detail_screen_view_model.
 import 'package:pokedex/util/extentions.dart';
 import 'package:shimmer/shimmer.dart';
 
-@RoutePage()
 class PokemonDetailScreen extends HookConsumerWidget {
   final int pokdexId;
 
@@ -358,7 +357,7 @@ class _BackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => context.router.back(),
+      onTap: () => context.pop(),
       child: SvgPicture.asset(
         Assets.icons.iconArrowLeft,
         width: 40,

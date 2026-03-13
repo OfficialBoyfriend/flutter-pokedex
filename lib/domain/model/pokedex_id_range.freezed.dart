@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,143 +9,266 @@ part of 'pokedex_id_range.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$PokedexIdRange {
-  int get start => throw _privateConstructorUsedError;
-  int get end => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
-  $PokedexIdRangeCopyWith<PokedexIdRange> get copyWith =>
-      throw _privateConstructorUsedError;
+ int get start; int get end;
+/// Create a copy of PokedexIdRange
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PokedexIdRangeCopyWith<PokedexIdRange> get copyWith => _$PokedexIdRangeCopyWithImpl<PokedexIdRange>(this as PokedexIdRange, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PokedexIdRange&&(identical(other.start, start) || other.start == start)&&(identical(other.end, end) || other.end == end));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,start,end);
+
+@override
+String toString() {
+  return 'PokedexIdRange(start: $start, end: $end)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $PokedexIdRangeCopyWith<$Res> {
-  factory $PokedexIdRangeCopyWith(
-          PokedexIdRange value, $Res Function(PokedexIdRange) then) =
-      _$PokedexIdRangeCopyWithImpl<$Res, PokedexIdRange>;
-  @useResult
-  $Res call({int start, int end});
-}
+abstract mixin class $PokedexIdRangeCopyWith<$Res>  {
+  factory $PokedexIdRangeCopyWith(PokedexIdRange value, $Res Function(PokedexIdRange) _then) = _$PokedexIdRangeCopyWithImpl;
+@useResult
+$Res call({
+ int start, int end
+});
 
+
+
+
+}
 /// @nodoc
-class _$PokedexIdRangeCopyWithImpl<$Res, $Val extends PokedexIdRange>
+class _$PokedexIdRangeCopyWithImpl<$Res>
     implements $PokedexIdRangeCopyWith<$Res> {
-  _$PokedexIdRangeCopyWithImpl(this._value, this._then);
+  _$PokedexIdRangeCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final PokedexIdRange _self;
+  final $Res Function(PokedexIdRange) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? start = null,
-    Object? end = null,
-  }) {
-    return _then(_value.copyWith(
-      start: null == start
-          ? _value.start
-          : start // ignore: cast_nullable_to_non_nullable
-              as int,
-      end: null == end
-          ? _value.end
-          : end // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
+/// Create a copy of PokedexIdRange
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? start = null,Object? end = null,}) {
+  return _then(_self.copyWith(
+start: null == start ? _self.start : start // ignore: cast_nullable_to_non_nullable
+as int,end: null == end ? _self.end : end // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [PokedexIdRange].
+extension PokedexIdRangePatterns on PokedexIdRange {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PokedexIdRange value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PokedexIdRange() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PokedexIdRange value)  $default,){
+final _that = this;
+switch (_that) {
+case _PokedexIdRange():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PokedexIdRange value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PokedexIdRange() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int start,  int end)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PokedexIdRange() when $default != null:
+return $default(_that.start,_that.end);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int start,  int end)  $default,) {final _that = this;
+switch (_that) {
+case _PokedexIdRange():
+return $default(_that.start,_that.end);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int start,  int end)?  $default,) {final _that = this;
+switch (_that) {
+case _PokedexIdRange() when $default != null:
+return $default(_that.start,_that.end);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
-abstract class _$$PokedexIdRangeImplCopyWith<$Res>
-    implements $PokedexIdRangeCopyWith<$Res> {
-  factory _$$PokedexIdRangeImplCopyWith(_$PokedexIdRangeImpl value,
-          $Res Function(_$PokedexIdRangeImpl) then) =
-      __$$PokedexIdRangeImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int start, int end});
+
+
+class _PokedexIdRange implements PokedexIdRange {
+  const _PokedexIdRange({required this.start, required this.end});
+  
+
+@override final  int start;
+@override final  int end;
+
+/// Create a copy of PokedexIdRange
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$PokedexIdRangeCopyWith<_PokedexIdRange> get copyWith => __$PokedexIdRangeCopyWithImpl<_PokedexIdRange>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PokedexIdRange&&(identical(other.start, start) || other.start == start)&&(identical(other.end, end) || other.end == end));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,start,end);
+
+@override
+String toString() {
+  return 'PokedexIdRange(start: $start, end: $end)';
+}
+
+
 }
 
 /// @nodoc
-class __$$PokedexIdRangeImplCopyWithImpl<$Res>
-    extends _$PokedexIdRangeCopyWithImpl<$Res, _$PokedexIdRangeImpl>
-    implements _$$PokedexIdRangeImplCopyWith<$Res> {
-  __$$PokedexIdRangeImplCopyWithImpl(
-      _$PokedexIdRangeImpl _value, $Res Function(_$PokedexIdRangeImpl) _then)
-      : super(_value, _then);
+abstract mixin class _$PokedexIdRangeCopyWith<$Res> implements $PokedexIdRangeCopyWith<$Res> {
+  factory _$PokedexIdRangeCopyWith(_PokedexIdRange value, $Res Function(_PokedexIdRange) _then) = __$PokedexIdRangeCopyWithImpl;
+@override @useResult
+$Res call({
+ int start, int end
+});
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? start = null,
-    Object? end = null,
-  }) {
-    return _then(_$PokedexIdRangeImpl(
-      start: null == start
-          ? _value.start
-          : start // ignore: cast_nullable_to_non_nullable
-              as int,
-      end: null == end
-          ? _value.end
-          : end // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
+
+
+
 }
-
 /// @nodoc
+class __$PokedexIdRangeCopyWithImpl<$Res>
+    implements _$PokedexIdRangeCopyWith<$Res> {
+  __$PokedexIdRangeCopyWithImpl(this._self, this._then);
 
-class _$PokedexIdRangeImpl implements _PokedexIdRange {
-  const _$PokedexIdRangeImpl({required this.start, required this.end});
+  final _PokedexIdRange _self;
+  final $Res Function(_PokedexIdRange) _then;
 
-  @override
-  final int start;
-  @override
-  final int end;
-
-  @override
-  String toString() {
-    return 'PokedexIdRange(start: $start, end: $end)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PokedexIdRangeImpl &&
-            (identical(other.start, start) || other.start == start) &&
-            (identical(other.end, end) || other.end == end));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, start, end);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PokedexIdRangeImplCopyWith<_$PokedexIdRangeImpl> get copyWith =>
-      __$$PokedexIdRangeImplCopyWithImpl<_$PokedexIdRangeImpl>(
-          this, _$identity);
+/// Create a copy of PokedexIdRange
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? start = null,Object? end = null,}) {
+  return _then(_PokedexIdRange(
+start: null == start ? _self.start : start // ignore: cast_nullable_to_non_nullable
+as int,end: null == end ? _self.end : end // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
 }
 
-abstract class _PokedexIdRange implements PokedexIdRange {
-  const factory _PokedexIdRange(
-      {required final int start,
-      required final int end}) = _$PokedexIdRangeImpl;
 
-  @override
-  int get start;
-  @override
-  int get end;
-  @override
-  @JsonKey(ignore: true)
-  _$$PokedexIdRangeImplCopyWith<_$PokedexIdRangeImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+// dart format on

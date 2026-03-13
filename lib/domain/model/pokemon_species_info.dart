@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'pokemon_species_info.freezed.dart';
 
 @freezed
-class PokemonSpeciesInfo with _$PokemonSpeciesInfo {
+abstract class PokemonSpeciesInfo with _$PokemonSpeciesInfo {
   factory PokemonSpeciesInfo({
     double? genderRate,
     required String desc,
@@ -11,4 +11,3 @@ class PokemonSpeciesInfo with _$PokemonSpeciesInfo {
     required int evolutionChainId,
   }) = _PokemonSpeciesInfo;
 }
-    

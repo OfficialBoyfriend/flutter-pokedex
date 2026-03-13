@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,176 +9,308 @@ part of 'pokemon_evolution_chain_info.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$PokemonEvolutionChainInfo {
-  PokemonCardInfo get cardInfo => throw _privateConstructorUsedError;
-  PokemonEvolutionChainInfo? get next => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
-  $PokemonEvolutionChainInfoCopyWith<PokemonEvolutionChainInfo> get copyWith =>
-      throw _privateConstructorUsedError;
+ PokemonCardInfo get cardInfo; PokemonEvolutionChainInfo? get next;
+/// Create a copy of PokemonEvolutionChainInfo
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$PokemonEvolutionChainInfoCopyWith<PokemonEvolutionChainInfo> get copyWith => _$PokemonEvolutionChainInfoCopyWithImpl<PokemonEvolutionChainInfo>(this as PokemonEvolutionChainInfo, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is PokemonEvolutionChainInfo&&(identical(other.cardInfo, cardInfo) || other.cardInfo == cardInfo)&&(identical(other.next, next) || other.next == next));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,cardInfo,next);
+
+@override
+String toString() {
+  return 'PokemonEvolutionChainInfo(cardInfo: $cardInfo, next: $next)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $PokemonEvolutionChainInfoCopyWith<$Res> {
-  factory $PokemonEvolutionChainInfoCopyWith(PokemonEvolutionChainInfo value,
-          $Res Function(PokemonEvolutionChainInfo) then) =
-      _$PokemonEvolutionChainInfoCopyWithImpl<$Res, PokemonEvolutionChainInfo>;
-  @useResult
-  $Res call({PokemonCardInfo cardInfo, PokemonEvolutionChainInfo? next});
+abstract mixin class $PokemonEvolutionChainInfoCopyWith<$Res>  {
+  factory $PokemonEvolutionChainInfoCopyWith(PokemonEvolutionChainInfo value, $Res Function(PokemonEvolutionChainInfo) _then) = _$PokemonEvolutionChainInfoCopyWithImpl;
+@useResult
+$Res call({
+ PokemonCardInfo cardInfo, PokemonEvolutionChainInfo? next
+});
 
-  $PokemonCardInfoCopyWith<$Res> get cardInfo;
-  $PokemonEvolutionChainInfoCopyWith<$Res>? get next;
+
+$PokemonCardInfoCopyWith<$Res> get cardInfo;$PokemonEvolutionChainInfoCopyWith<$Res>? get next;
+
 }
-
 /// @nodoc
-class _$PokemonEvolutionChainInfoCopyWithImpl<$Res,
-        $Val extends PokemonEvolutionChainInfo>
+class _$PokemonEvolutionChainInfoCopyWithImpl<$Res>
     implements $PokemonEvolutionChainInfoCopyWith<$Res> {
-  _$PokemonEvolutionChainInfoCopyWithImpl(this._value, this._then);
+  _$PokemonEvolutionChainInfoCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final PokemonEvolutionChainInfo _self;
+  final $Res Function(PokemonEvolutionChainInfo) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? cardInfo = null,
-    Object? next = freezed,
-  }) {
-    return _then(_value.copyWith(
-      cardInfo: null == cardInfo
-          ? _value.cardInfo
-          : cardInfo // ignore: cast_nullable_to_non_nullable
-              as PokemonCardInfo,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as PokemonEvolutionChainInfo?,
-    ) as $Val);
+/// Create a copy of PokemonEvolutionChainInfo
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? cardInfo = null,Object? next = freezed,}) {
+  return _then(_self.copyWith(
+cardInfo: null == cardInfo ? _self.cardInfo : cardInfo // ignore: cast_nullable_to_non_nullable
+as PokemonCardInfo,next: freezed == next ? _self.next : next // ignore: cast_nullable_to_non_nullable
+as PokemonEvolutionChainInfo?,
+  ));
+}
+/// Create a copy of PokemonEvolutionChainInfo
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PokemonCardInfoCopyWith<$Res> get cardInfo {
+  
+  return $PokemonCardInfoCopyWith<$Res>(_self.cardInfo, (value) {
+    return _then(_self.copyWith(cardInfo: value));
+  });
+}/// Create a copy of PokemonEvolutionChainInfo
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PokemonEvolutionChainInfoCopyWith<$Res>? get next {
+    if (_self.next == null) {
+    return null;
   }
 
-  @override
-  @pragma('vm:prefer-inline')
-  $PokemonCardInfoCopyWith<$Res> get cardInfo {
-    return $PokemonCardInfoCopyWith<$Res>(_value.cardInfo, (value) {
-      return _then(_value.copyWith(cardInfo: value) as $Val);
-    });
-  }
+  return $PokemonEvolutionChainInfoCopyWith<$Res>(_self.next!, (value) {
+    return _then(_self.copyWith(next: value));
+  });
+}
+}
 
-  @override
-  @pragma('vm:prefer-inline')
-  $PokemonEvolutionChainInfoCopyWith<$Res>? get next {
-    if (_value.next == null) {
-      return null;
-    }
 
-    return $PokemonEvolutionChainInfoCopyWith<$Res>(_value.next!, (value) {
-      return _then(_value.copyWith(next: value) as $Val);
-    });
-  }
+/// Adds pattern-matching-related methods to [PokemonEvolutionChainInfo].
+extension PokemonEvolutionChainInfoPatterns on PokemonEvolutionChainInfo {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _PokemonEvolutionChainInfo value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainInfo() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _PokemonEvolutionChainInfo value)  $default,){
+final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainInfo():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _PokemonEvolutionChainInfo value)?  $default,){
+final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainInfo() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( PokemonCardInfo cardInfo,  PokemonEvolutionChainInfo? next)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainInfo() when $default != null:
+return $default(_that.cardInfo,_that.next);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( PokemonCardInfo cardInfo,  PokemonEvolutionChainInfo? next)  $default,) {final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainInfo():
+return $default(_that.cardInfo,_that.next);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( PokemonCardInfo cardInfo,  PokemonEvolutionChainInfo? next)?  $default,) {final _that = this;
+switch (_that) {
+case _PokemonEvolutionChainInfo() when $default != null:
+return $default(_that.cardInfo,_that.next);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
-abstract class _$$PokemonEvolutionChainInfoImplCopyWith<$Res>
-    implements $PokemonEvolutionChainInfoCopyWith<$Res> {
-  factory _$$PokemonEvolutionChainInfoImplCopyWith(
-          _$PokemonEvolutionChainInfoImpl value,
-          $Res Function(_$PokemonEvolutionChainInfoImpl) then) =
-      __$$PokemonEvolutionChainInfoImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({PokemonCardInfo cardInfo, PokemonEvolutionChainInfo? next});
 
-  @override
-  $PokemonCardInfoCopyWith<$Res> get cardInfo;
-  @override
-  $PokemonEvolutionChainInfoCopyWith<$Res>? get next;
+
+class _PokemonEvolutionChainInfo implements PokemonEvolutionChainInfo {
+  const _PokemonEvolutionChainInfo({required this.cardInfo, this.next});
+  
+
+@override final  PokemonCardInfo cardInfo;
+@override final  PokemonEvolutionChainInfo? next;
+
+/// Create a copy of PokemonEvolutionChainInfo
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$PokemonEvolutionChainInfoCopyWith<_PokemonEvolutionChainInfo> get copyWith => __$PokemonEvolutionChainInfoCopyWithImpl<_PokemonEvolutionChainInfo>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _PokemonEvolutionChainInfo&&(identical(other.cardInfo, cardInfo) || other.cardInfo == cardInfo)&&(identical(other.next, next) || other.next == next));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,cardInfo,next);
+
+@override
+String toString() {
+  return 'PokemonEvolutionChainInfo(cardInfo: $cardInfo, next: $next)';
+}
+
+
 }
 
 /// @nodoc
-class __$$PokemonEvolutionChainInfoImplCopyWithImpl<$Res>
-    extends _$PokemonEvolutionChainInfoCopyWithImpl<$Res,
-        _$PokemonEvolutionChainInfoImpl>
-    implements _$$PokemonEvolutionChainInfoImplCopyWith<$Res> {
-  __$$PokemonEvolutionChainInfoImplCopyWithImpl(
-      _$PokemonEvolutionChainInfoImpl _value,
-      $Res Function(_$PokemonEvolutionChainInfoImpl) _then)
-      : super(_value, _then);
+abstract mixin class _$PokemonEvolutionChainInfoCopyWith<$Res> implements $PokemonEvolutionChainInfoCopyWith<$Res> {
+  factory _$PokemonEvolutionChainInfoCopyWith(_PokemonEvolutionChainInfo value, $Res Function(_PokemonEvolutionChainInfo) _then) = __$PokemonEvolutionChainInfoCopyWithImpl;
+@override @useResult
+$Res call({
+ PokemonCardInfo cardInfo, PokemonEvolutionChainInfo? next
+});
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? cardInfo = null,
-    Object? next = freezed,
-  }) {
-    return _then(_$PokemonEvolutionChainInfoImpl(
-      cardInfo: null == cardInfo
-          ? _value.cardInfo
-          : cardInfo // ignore: cast_nullable_to_non_nullable
-              as PokemonCardInfo,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as PokemonEvolutionChainInfo?,
-    ));
-  }
+
+@override $PokemonCardInfoCopyWith<$Res> get cardInfo;@override $PokemonEvolutionChainInfoCopyWith<$Res>? get next;
+
 }
-
 /// @nodoc
+class __$PokemonEvolutionChainInfoCopyWithImpl<$Res>
+    implements _$PokemonEvolutionChainInfoCopyWith<$Res> {
+  __$PokemonEvolutionChainInfoCopyWithImpl(this._self, this._then);
 
-class _$PokemonEvolutionChainInfoImpl implements _PokemonEvolutionChainInfo {
-  const _$PokemonEvolutionChainInfoImpl({required this.cardInfo, this.next});
+  final _PokemonEvolutionChainInfo _self;
+  final $Res Function(_PokemonEvolutionChainInfo) _then;
 
-  @override
-  final PokemonCardInfo cardInfo;
-  @override
-  final PokemonEvolutionChainInfo? next;
-
-  @override
-  String toString() {
-    return 'PokemonEvolutionChainInfo(cardInfo: $cardInfo, next: $next)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$PokemonEvolutionChainInfoImpl &&
-            (identical(other.cardInfo, cardInfo) ||
-                other.cardInfo == cardInfo) &&
-            (identical(other.next, next) || other.next == next));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, cardInfo, next);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$PokemonEvolutionChainInfoImplCopyWith<_$PokemonEvolutionChainInfoImpl>
-      get copyWith => __$$PokemonEvolutionChainInfoImplCopyWithImpl<
-          _$PokemonEvolutionChainInfoImpl>(this, _$identity);
+/// Create a copy of PokemonEvolutionChainInfo
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? cardInfo = null,Object? next = freezed,}) {
+  return _then(_PokemonEvolutionChainInfo(
+cardInfo: null == cardInfo ? _self.cardInfo : cardInfo // ignore: cast_nullable_to_non_nullable
+as PokemonCardInfo,next: freezed == next ? _self.next : next // ignore: cast_nullable_to_non_nullable
+as PokemonEvolutionChainInfo?,
+  ));
 }
 
-abstract class _PokemonEvolutionChainInfo implements PokemonEvolutionChainInfo {
-  const factory _PokemonEvolutionChainInfo(
-      {required final PokemonCardInfo cardInfo,
-      final PokemonEvolutionChainInfo? next}) = _$PokemonEvolutionChainInfoImpl;
+/// Create a copy of PokemonEvolutionChainInfo
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PokemonCardInfoCopyWith<$Res> get cardInfo {
+  
+  return $PokemonCardInfoCopyWith<$Res>(_self.cardInfo, (value) {
+    return _then(_self.copyWith(cardInfo: value));
+  });
+}/// Create a copy of PokemonEvolutionChainInfo
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PokemonEvolutionChainInfoCopyWith<$Res>? get next {
+    if (_self.next == null) {
+    return null;
+  }
 
-  @override
-  PokemonCardInfo get cardInfo;
-  @override
-  PokemonEvolutionChainInfo? get next;
-  @override
-  @JsonKey(ignore: true)
-  _$$PokemonEvolutionChainInfoImplCopyWith<_$PokemonEvolutionChainInfoImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  return $PokemonEvolutionChainInfoCopyWith<$Res>(_self.next!, (value) {
+    return _then(_self.copyWith(next: value));
+  });
 }
+}
+
+// dart format on

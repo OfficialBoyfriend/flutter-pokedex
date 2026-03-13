@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -12,25 +11,15 @@ import 'package:pokedex/presentation/theme/common_colors.dart';
 import 'package:pokedex/presentation/viewmodel/favorite_button_view_model.dart';
 import 'package:pokedex/util/extentions.dart';
 
-enum PokemonCardViewSize {
-  small,
-  medium,
-}
+enum PokemonCardViewSize { small, medium }
 
 class PokemonCardView extends StatelessWidget {
   final PokemonCardInfo info;
   final PokemonCardViewSize size;
 
-  const PokemonCardView._({
-    Key? key,
-    required this.info,
-    required this.size,
-  }) : super(key: key);
+  const PokemonCardView._({super.key, required this.info, required this.size});
 
-  factory PokemonCardView.medium({
-    Key? key,
-    required PokemonCardInfo info,
-  }) {
+  factory PokemonCardView.medium({Key? key, required PokemonCardInfo info}) {
     return PokemonCardView._(
       key: key,
       info: info,
@@ -38,10 +27,7 @@ class PokemonCardView extends StatelessWidget {
     );
   }
 
-  factory PokemonCardView.small({
-    Key? key,
-    required PokemonCardInfo info,
-  }) {
+  factory PokemonCardView.small({Key? key, required PokemonCardInfo info}) {
     return PokemonCardView._(
       key: key,
       info: info,
@@ -61,16 +47,17 @@ class PokemonCardView extends StatelessWidget {
 }
 
 class _FavButton extends ConsumerWidget {
-  const _FavButton({
-    required this.pokdexId,
-  });
+  const _FavButton({required this.pokdexId});
 
   final int pokdexId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isFav = ref.watch(favoriteButtonViewModelProvider(pokdexId)
-        .select((state) => state.isFavorite));
+    final isFav = ref.watch(
+      favoriteButtonViewModelProvider(
+        pokdexId,
+      ).select((state) => state.isFavorite),
+    );
 
     return GestureDetector(
       onTap: () {
@@ -90,8 +77,9 @@ class _FavButton extends ConsumerWidget {
           width: 32,
           height: 32,
         ),
-        crossFadeState:
-            isFav ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+        crossFadeState: isFav
+            ? CrossFadeState.showSecond
+            : CrossFadeState.showFirst,
       ),
     );
   }
@@ -109,18 +97,12 @@ class _MediumWidget extends StatelessWidget {
     final name = info.name.replaceAll('-', " ").capitalizeFirst();
 
     return GestureDetector(
-      onTap: () => context.pushRoute(
-        PokemonDetailRoute(
-          pokdexId: info.pokedexId,
-        ),
-      ),
+      onTap: () => PokemonDetailRoute(pokdexId: info.pokedexId).push(context),
       child: Card(
         elevation: 0,
         margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 8),
         color: info.mainType.bgColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         child: Stack(
           children: [
             Container(
@@ -138,18 +120,18 @@ class _MediumWidget extends StatelessWidget {
                         info.pokedexId.pokedexIdFormat(),
                         style: textTheme.titleSmall?.copyWith(color: Black800),
                       ),
-                      Text(
-                        name,
-                        style: textTheme.titleMedium,
-                      ),
+                      Text(name, style: textTheme.titleMedium),
                       const Gap(4),
                       Row(
-                          children: info.types
-                              .mapIndexed((i, type) => Padding(
-                                  padding:
-                                      EdgeInsets.only(left: i == 0 ? 0 : 4),
-                                  child: PokemonTypeChip.medium(type)))
-                              .toList()),
+                        children: info.types
+                            .mapIndexed(
+                              (i, type) => Padding(
+                                padding: EdgeInsets.only(left: i == 0 ? 0 : 4),
+                                child: PokemonTypeChip.medium(type),
+                              ),
+                            )
+                            .toList(),
+                      ),
                     ],
                   ),
                   Stack(
@@ -175,12 +157,10 @@ class _MediumWidget extends StatelessWidget {
                       Positioned(
                         top: 6,
                         right: 12,
-                        child: _FavButton(
-                          pokdexId: info.pokedexId,
-                        ),
+                        child: _FavButton(pokdexId: info.pokedexId),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -205,10 +185,7 @@ class _SmallWidget extends StatelessWidget {
     return Container(
       height: 74,
       decoration: BoxDecoration(
-        border: Border.all(
-          color: Black100,
-          width: 1.0,
-        ),
+        border: Border.all(color: Black100, width: 1.0),
         borderRadius: BorderRadius.circular(96.0),
       ),
       child: Row(
@@ -240,7 +217,8 @@ class _SmallWidget extends StatelessWidget {
                   width: 80,
                   height: 80,
                   fit: BoxFit.contain,
-                  errorBuilder: (context, error, stackTrace) => const SizedBox.shrink(),
+                  errorBuilder: (context, error, stackTrace) =>
+                      const SizedBox.shrink(),
                 ),
               ],
             ),
@@ -262,19 +240,22 @@ class _SmallWidget extends StatelessWidget {
                 ),
                 const Gap(4),
                 Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: info.types
-                        .mapIndexed((i, type) => Expanded(
-                              child: Padding(
-                                  padding:
-                                      EdgeInsets.only(left: i == 0 ? 0 : 4),
-                                  child: PokemonTypeChip.small(type)),
-                            ))
-                        .toList()),
+                  mainAxisSize: MainAxisSize.min,
+                  children: info.types
+                      .mapIndexed(
+                        (i, type) => Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: i == 0 ? 0 : 4),
+                            child: PokemonTypeChip.small(type),
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
               ],
             ),
           ),
-          const Gap(48)
+          const Gap(48),
         ],
       ),
     );

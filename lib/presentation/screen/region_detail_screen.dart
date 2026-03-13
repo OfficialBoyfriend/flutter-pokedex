@@ -1,7 +1,7 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pokedex/domain/model/pokedex_id_range.dart';
 import 'package:pokedex/domain/model/region_type.dart';
@@ -10,7 +10,6 @@ import 'package:pokedex/presentation/components/pokemon_card_view.dart';
 import 'package:pokedex/presentation/theme/common_colors.dart';
 import 'package:pokedex/presentation/viewmodel/pokemon_list_view_model.dart';
 
-@RoutePage()
 class RegionDetailScreen extends HookConsumerWidget {
   const RegionDetailScreen({
     Key? key,
@@ -55,7 +54,7 @@ class RegionDetailScreen extends HookConsumerWidget {
         leading: Container(
           margin: const EdgeInsets.only(left: 16),
           child: GestureDetector(
-            onTap: () => context.router.back(),
+            onTap: () => context.pop(),
             child: SvgPicture.asset(
               Assets.icons.iconArrowLeft2,
               width: 32,

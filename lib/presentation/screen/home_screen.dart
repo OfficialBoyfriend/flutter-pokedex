@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
@@ -12,7 +11,6 @@ import 'package:pokedex/presentation/tabs/profile_tab.dart';
 import 'package:pokedex/presentation/tabs/regions_tab.dart';
 import 'package:pokedex/presentation/theme/common_colors.dart';
 
-@RoutePage()
 class HomeScreen extends HookConsumerWidget {
   const HomeScreen({super.key});
 
