@@ -24,7 +24,7 @@ class PokemonDetailScreenViewModel
   final Ref ref;
 
   Future<void> _init(int pokedexId) async {
-    final info = await ref.read(
+    final info = await ref.watch(
       pokemonDetailInfoUseCaseProvider(pokedexId).future,
     );
 
